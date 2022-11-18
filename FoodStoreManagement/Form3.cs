@@ -65,7 +65,7 @@ namespace FoodStoreManagement
             {
                 pictureBoxes_newdish[i].Size = new Size(150, 157);
                 pictureBoxes_newdish[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
+                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
             }
             pictureBoxes_newdish[0].Location=new Point(0,0);
             for(int i=1; i < pictureBoxes_newdish.Count; i++)
@@ -95,7 +95,7 @@ namespace FoodStoreManagement
             {
                 pictureBoxes_discount[i].Size = new Size(150, 90);
                 pictureBoxes_discount[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxes_discount[i].Image = new Bitmap(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
+                pictureBoxes_discount[i].Image = new Bitmap(Image.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
             }
             pictureBoxes_discount[0].Location = new Point(0, 0);
             for (int i = 1; i < pictureBoxes_discount.Count; i++)
@@ -116,7 +116,7 @@ namespace FoodStoreManagement
             images.ImageSize = new Size(150, 120);
             for(int i = 0; i < 5; i++)
             {
-                images.Images.Add(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
+                images.Images.Add(Image.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
             }
             listView1.LargeImageList = images;
             listView3.LargeImageList = images;
@@ -180,8 +180,8 @@ namespace FoodStoreManagement
             imageListLarge.ImageSize = new Size(100, 100);
 
             // Initialize the ImageList objects with bitmaps.
-            imageListLarge.Images.Add(Bitmap.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
-            imageListLarge.Images.Add(Bitmap.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
+            imageListLarge.Images.Add(Bitmap.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
+            imageListLarge.Images.Add(Bitmap.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
 
             //Assign the ImageList objects to the ListView.
             //listView1.LargeImageList = imageListLarge;
