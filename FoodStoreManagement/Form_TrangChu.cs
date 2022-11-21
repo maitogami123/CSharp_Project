@@ -5,18 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Image = System.Drawing.Image;
-using ListView = System.Windows.Forms.ListView;
 
 namespace FoodStoreManagement
 {
-    public partial class Form3 : Form
+    public partial class Form_TrangChu : Form
     {
         Timer timer1;
         Timer timer2;
@@ -39,7 +35,8 @@ namespace FoodStoreManagement
         private const uint ESB_DISABLE_BOTH = 0x3;
 
         private const uint ESB_ENABLE_BOTH = 0x0;
-        public Form3()
+
+        public Form_TrangChu()
         {
             InitializeComponent();
             timer1 = new Timer();
@@ -50,8 +47,9 @@ namespace FoodStoreManagement
             timer2.Tick += new EventHandler(timer1_Tick);
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form_TrangChu_Load(object sender, EventArgs e)
         {
+            this.FormClosed += new FormClosedEventHandler(Form_FormClosed);
             Control[] matches;
             for (int i = 1; i <= 100; i++)
             {
@@ -65,12 +63,12 @@ namespace FoodStoreManagement
             {
                 pictureBoxes_newdish[i].Size = new Size(150, 157);
                 pictureBoxes_newdish[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
+                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
             }
-            pictureBoxes_newdish[0].Location=new Point(0,0);
-            for(int i=1; i < pictureBoxes_newdish.Count; i++)
+            pictureBoxes_newdish[0].Location = new Point(0, 0);
+            for (int i = 1; i < pictureBoxes_newdish.Count; i++)
             {
-                pictureBoxes_newdish[i].Location=new Point(pictureBoxes_newdish[i-1].Location.X+180,0);
+                pictureBoxes_newdish[i].Location = new Point(pictureBoxes_newdish[i - 1].Location.X + 180, 0);
             }
             for (int i = 0; i < pictureBoxes_newdish.Count; i++)
             {
@@ -95,7 +93,7 @@ namespace FoodStoreManagement
             {
                 pictureBoxes_discount[i].Size = new Size(150, 90);
                 pictureBoxes_discount[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxes_discount[i].Image = new Bitmap(Image.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
+                pictureBoxes_discount[i].Image = new Bitmap(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
             }
             pictureBoxes_discount[0].Location = new Point(0, 0);
             for (int i = 1; i < pictureBoxes_discount.Count; i++)
@@ -111,94 +109,37 @@ namespace FoodStoreManagement
                 y_pos_discount.Add(b);
             }
             //Console.WriteLine(pictureBoxes_discount.Count.ToString());
-            
-            ImageList images = new ImageList();
+
+            /*ImageList images = new ImageList();
             images.ImageSize = new Size(150, 120);
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
-                images.Images.Add(Image.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
+                images.Images.Add(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
             }
             listView1.LargeImageList = images;
             listView3.LargeImageList = images;
-            
+
             for (int itemIndex = 1; itemIndex <= 5; itemIndex++)
             {
                 listView1.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
                 listView3.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
-            }
-            //ShowScrollBar(this.listView1.Handle, (int)SB_VERT, true);
-            //Gio hang
-            //ListView ds_giohang = new ListView();
-            //ds_giohang.Bounds = new Rectangle(new Point(44, 35), new Size(813, 305));
-            ds_giohang.View = View.Details;
-            // Select the item and subitems when selection is made.
-            ds_giohang.CheckBoxes = true;
-            ds_giohang.FullRowSelect = true;
-            // Display grid lines.
-            ds_giohang.GridLines = true;
-            // Sort the items in the list in ascending order.
-            ds_giohang.Sorting = SortOrder.Ascending;
-            ListViewItem item1 = new ListViewItem("", 0);
-            //item1.Checked = true;
-            item1.SubItems.Add("1");
-            item1.SubItems.Add("2");
-            item1.SubItems.Add("3");
-            item1.SubItems.Add("3");
-            ListViewItem item2 = new ListViewItem("", 0);
-            item2.SubItems.Add("4");
-            item2.SubItems.Add("5");
-            item2.SubItems.Add("6");
-            item2.SubItems.Add("3");
-            ListViewItem item3 = new ListViewItem("", 0);
-            // Place a check mark next to the item.
-            //item3.Checked = true;
-            item3.SubItems.Add("7");
-            item3.SubItems.Add("8");
-            item3.SubItems.Add("9");
-            item3.SubItems.Add("3");
-
-            // Create columns for the items and subitems.
-            // Width of -2 indicates auto-size.
-
-            ds_giohang.Columns.Add("Món ăn", -2, HorizontalAlignment.Center);
-            ds_giohang.Columns.Add("Tên món ăn", -2, HorizontalAlignment.Center);
-            ds_giohang.Columns.Add("Số lượng", -2, HorizontalAlignment.Center);
-            ds_giohang.Columns.Add("Giá tiền/1 món", -2, HorizontalAlignment.Center);
-            ds_giohang.Columns.Add("Giá tiền", -2, HorizontalAlignment.Center);
-            //ds_giohang.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-            ds_giohang.Columns[0].Width = 100;
-            ds_giohang.Columns[1].Width = 150;
-            ds_giohang.Columns[2].Width = 75;
-            ds_giohang.Columns[3].Width = 120;
-            ds_giohang.Columns[4].Width = 145;
-
-            //Add the items to the ListView.
-            ds_giohang.Items.AddRange(new ListViewItem[] { item1, item2, item3 });
-
-            // Create two ImageList objects.
-            ImageList imageListLarge = new ImageList();
-            imageListLarge.ImageSize = new Size(100, 100);
-
-            // Initialize the ImageList objects with bitmaps.
-            imageListLarge.Images.Add(Bitmap.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
-            imageListLarge.Images.Add(Bitmap.FromFile(@"E:\AllCode\CSharp_Project\FoodStoreManagement\Background\images.jpg"));
-
-            //Assign the ImageList objects to the ListView.
-            //listView1.LargeImageList = imageListLarge;
-            //listView1.SmallImageList = imageListSmall;
-            ds_giohang.StateImageList = imageListLarge;
-
-            
+            }*/
         }
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+        }
+
         void timer_Tick(object sender, EventArgs e)
         {
             lock_newdish = true;
             foreach (PictureBox pictureBox in pictureBoxes_newdish)
             {
-                if(direction_newdish=="→")
+                if (direction_newdish == "→")
                 {
-                        pictureBox.Location = new Point(pictureBox.Location.X - 15, pictureBox.Location.Y);
-                        Console.WriteLine(pictureBox8.Location.X.ToString());
+                    pictureBox.Location = new Point(pictureBox.Location.X - 15, pictureBox.Location.Y);
+                    Console.WriteLine(pictureBox8.Location.X.ToString());
                 }
                 if (direction_newdish == "←")
                 {
@@ -206,14 +147,14 @@ namespace FoodStoreManagement
                     Console.WriteLine(pictureBox8.Location.X.ToString());
                 }
             }
-            
+
             if (pictureBoxes_newdish[0].Location.X <= x_pos_newdish[0] - 180 && direction_newdish == "→")
             {
                 //MessageBox.Show(pictureBox5.Location.X.ToString());
                 timer1.Stop();
                 lock_newdish = false;
             }
-            if (pictureBoxes_newdish[pictureBoxes_newdish.Count-1].Location.X >= x_pos_newdish[x_pos_newdish.Count-1] + 180 && direction_newdish == "←")
+            if (pictureBoxes_newdish[pictureBoxes_newdish.Count - 1].Location.X >= x_pos_newdish[x_pos_newdish.Count - 1] + 180 && direction_newdish == "←")
             {
                 //MessageBox.Show(pictureBox5.Location.X.ToString());
                 timer1.Stop();
@@ -222,8 +163,8 @@ namespace FoodStoreManagement
         }
         private void label9_Click(object sender, EventArgs e)
         {
-            
-            if (lock_newdish==false)
+
+            if (lock_newdish == false)
             {
                 //MessageBox.Show((newdish.Width).ToString());
                 for (int i = 0; i < pictureBoxes_newdish.Count; i++)
@@ -231,9 +172,9 @@ namespace FoodStoreManagement
                     x_pos_newdish[i] = pictureBoxes_newdish[i].Location.X;
                     y_pos_newdish[i] = pictureBoxes_newdish[i].Location.Y;
                 }
-                Label ll= sender as Label;
+                Label ll = sender as Label;
                 direction_newdish = ll.Text;
-                if (pictureBoxes_newdish[pictureBoxes_newdish.Count - 1].Location.X + 210 == newdish_list.Width && direction_newdish=="→")
+                if (pictureBoxes_newdish[pictureBoxes_newdish.Count - 1].Location.X + 210 == newdish_list.Width && direction_newdish == "→")
                 {
                     pictureBoxes_newdish[0].Location = new Point(0, 0);
                     for (int i = 1; i < pictureBoxes_newdish.Count; i++)
@@ -241,7 +182,7 @@ namespace FoodStoreManagement
                         pictureBoxes_newdish[i].Location = new Point(pictureBoxes_newdish[i - 1].Location.X + 180, pictureBoxes_newdish[i - 1].Location.Y);
                     }
                 }
-                else if(pictureBoxes_newdish[0].Location.X == 0 && direction_newdish=="←")
+                else if (pictureBoxes_newdish[0].Location.X == 0 && direction_newdish == "←")
                 {
                 }
                 else
@@ -308,54 +249,6 @@ namespace FoodStoreManagement
                     //MessageBox.Show((discount_list.Width).ToString());
                     timer2.Start();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (panel3.Visible == true)
-            {
-
-                panel3.Visible = false;
-            }
-            else
-            {
-                panel10.Visible = false;
-                panel8.Visible = false;
-                panel3.Visible = true;
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("ggg");
-            if (panel8.Visible==true)
-            {
-                panel8.Visible = false;
-            }
-            else
-                panel3.Visible = false;
-                panel10.Visible=false;
-                panel8.Visible=true;
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-            //ListViewItem lastVisible = listView1.TopItem;
-            /*for (int i = listView1.TopItem.Index + 1; i < listView1.Items.Count; i++)
-            {
-                if (listView1.ClientRectangle.Contains(listView1.Items[i].Bounds))
-                {
-                    //lastVisible = listView1.Items[i];
-                    Console.WriteLine(i.ToString());
-                }
-                else
-                {
-                    break;
-                }
-            }*/
-
-            
-            
         }
     }
 }

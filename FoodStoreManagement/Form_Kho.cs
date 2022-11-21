@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace FoodStoreManagement
 {
-    public partial class Form5 : Form
+    public partial class Form_Kho : Form
     {
-        public Form5()
+        public Form_Kho()
         {
             InitializeComponent();
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void Form_Kho_Load(object sender, EventArgs e)
         {
+            this.FormClosed += new FormClosedEventHandler(Form_FormClosed);
+        }
 
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

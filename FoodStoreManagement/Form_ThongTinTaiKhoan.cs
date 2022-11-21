@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
-    public partial class Form4 : Form
+    public partial class Form_ThongTinTaiKhoan : Form
     {
-        public Form4()
+        public Form_ThongTinTaiKhoan()
         {
             InitializeComponent();
         }
-
     }
 }
