@@ -20,7 +20,8 @@ namespace FoodStoreManagement.GUI
         private void Form_GioHang_Load(object sender, EventArgs e)
         {
             this.FormClosed += new FormClosedEventHandler(Form_FormClosed);
-            ds_giohang.View = View.Details;
+            
+            /*ds_giohang.View = View.Details;
             // Select the item and subitems when selection is made.
             ds_giohang.CheckBoxes = true;
             ds_giohang.FullRowSelect = true;
@@ -76,7 +77,7 @@ namespace FoodStoreManagement.GUI
             //Assign the ImageList objects to the ListView.
             //listView1.LargeImageList = imageListLarge;
             //listView1.SmallImageList = imageListSmall;
-            ds_giohang.StateImageList = imageListLarge;
+            ds_giohang.StateImageList = imageListLarge;*/
         }
 
         private void Form_FormClosed(object sender, FormClosedEventArgs e)

@@ -37,10 +37,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker_Date = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Time = new System.Windows.Forms.DateTimePicker();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -66,13 +67,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.dateTimePicker_Date);
             this.panel1.Controls.Add(this.dateTimePicker_Time);
-            this.panel1.Controls.Add(this.listView2);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Location = new System.Drawing.Point(36, 48);
             this.panel1.Name = "panel1";
@@ -133,15 +134,6 @@
             this.dateTimePicker_Time.TabIndex = 2;
             this.dateTimePicker_Time.Value = new System.DateTime(2022, 11, 21, 3, 0, 0, 0);
             // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(0, 75);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(656, 182);
-            this.listView2.TabIndex = 22;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(419, 0);
@@ -151,12 +143,22 @@
             this.button4.Text = "Đăt bàn";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 75);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(656, 182);
+            this.dataGridView1.TabIndex = 23;
+            // 
             // Form_DatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(731, 346);
+            this.ClientSize = new System.Drawing.Size(730, 332);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -170,6 +172,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,7 +188,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Date;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

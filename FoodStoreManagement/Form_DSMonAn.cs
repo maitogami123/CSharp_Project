@@ -21,7 +21,7 @@ namespace FoodStoreManagement.GUI
         private void Form_DatHang_Load(object sender, EventArgs e)
         {
             this.FormClosed += new FormClosedEventHandler(Form_FormClosed);
-            ImageList images = new ImageList();
+            /*ImageList images = new ImageList();
             images.ImageSize = new Size(150, 120);
             for (int i = 0; i < 5; i++)
             {
@@ -34,7 +34,7 @@ namespace FoodStoreManagement.GUI
             {
                 //listView1.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
                 listView1.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
-            }
+            }*/
         }
 
         private void Form_FormClosed(object sender, FormClosedEventArgs e)

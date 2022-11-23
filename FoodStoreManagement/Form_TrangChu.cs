@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,6 +38,8 @@ namespace FoodStoreManagement.GUI
         private const uint ESB_DISABLE_BOTH = 0x3;
 
         private const uint ESB_ENABLE_BOTH = 0x0;
+        string directoryName;
+        string filePath = Directory.GetCurrentDirectory();
 
         public Form_TrangChu()
         {
@@ -45,6 +50,21 @@ namespace FoodStoreManagement.GUI
             timer2 = new Timer();
             timer2.Interval = 10;
             timer2.Tick += new EventHandler(timer1_Tick);
+            directoryName = Path.GetDirectoryName(filePath);
+            int i = 0,g=3;
+            while (g!=0)
+            {
+                directoryName = Path.GetDirectoryName(filePath);
+                Console.WriteLine("GetDirectoryName('{0}') returns '{1}'",
+                    filePath, directoryName);
+                filePath = directoryName;
+                if (i == 1)
+                {
+                    filePath = directoryName + @"\";
+                }
+                i++;
+                g--;
+            }
         }
 
         private void Form_TrangChu_Load(object sender, EventArgs e)
@@ -63,7 +83,7 @@ namespace FoodStoreManagement.GUI
             {
                 pictureBoxes_newdish[i].Size = new Size(150, 157);
                 pictureBoxes_newdish[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
+                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(directoryName+ @"\Imagefile\default_image.png"));
             }
             pictureBoxes_newdish[0].Location = new Point(0, 0);
             for (int i = 1; i < pictureBoxes_newdish.Count; i++)
@@ -93,7 +113,7 @@ namespace FoodStoreManagement.GUI
             {
                 pictureBoxes_discount[i].Size = new Size(150, 90);
                 pictureBoxes_discount[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxes_discount[i].Image = new Bitmap(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
+                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(directoryName + @"\Imagefile\default_image.png"));
             }
             pictureBoxes_discount[0].Location = new Point(0, 0);
             for (int i = 1; i < pictureBoxes_discount.Count; i++)
