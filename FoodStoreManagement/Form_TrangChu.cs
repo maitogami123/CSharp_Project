@@ -55,8 +55,6 @@ namespace FoodStoreManagement.GUI
             while (g!=0)
             {
                 directoryName = Path.GetDirectoryName(filePath);
-                Console.WriteLine("GetDirectoryName('{0}') returns '{1}'",
-                    filePath, directoryName);
                 filePath = directoryName;
                 if (i == 1)
                 {
