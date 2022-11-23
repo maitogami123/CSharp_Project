@@ -9,16 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
     public partial class Form_Menu : Form
     {
         Form_NhapHang form_NhapHang;
-        Form_MatHang form_MatHang;
+        Form_DSNguyenLieu form_MatHang;
         Form_Kho form_Kho;
         Form_DSKhuyenMai form_DSKhuyenMai;
         Form_DatBan form_DatBan;
-        Form_DatHang form_DatHang;
+        Form_DSMonAn form_DatHang;
         Form_DoanhThuTongQuan form_DoanhThuTongQuan;
         Form_GioHang form_GioHang;
         Form_HoaDon form_HoaDon;
@@ -41,7 +41,7 @@ namespace FoodStoreManagement
             form_NhapHang = new Form_NhapHang();
             form_NhapHang.TopLevel = false;
             panel_FormContainer.Controls.Add(form_NhapHang);
-            form_MatHang = new Form_MatHang();
+            form_MatHang = new Form_DSNguyenLieu();
             form_MatHang.TopLevel = false;
             panel_FormContainer.Controls.Add(form_MatHang);
             form_Kho = new Form_Kho();
@@ -50,7 +50,7 @@ namespace FoodStoreManagement
             form_DSKhuyenMai = new Form_DSKhuyenMai();
             form_DSKhuyenMai.TopLevel = false;
             panel_FormContainer.Controls.Add(form_DSKhuyenMai);
-            form_DatHang = new Form_DatHang();
+            form_DatHang = new Form_DSMonAn();
             form_DatHang.TopLevel = false;
             panel_FormContainer.Controls.Add(form_DatHang);
             form_DatBan = new Form_DatBan();
@@ -208,6 +208,11 @@ namespace FoodStoreManagement
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_FormContainer_Paint(object sender, PaintEventArgs e)
         {
 
         }

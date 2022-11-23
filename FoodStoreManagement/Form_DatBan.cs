@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
     public partial class Form_DatBan : Form
     {

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
     public partial class Form_TrangChu : Form
     {

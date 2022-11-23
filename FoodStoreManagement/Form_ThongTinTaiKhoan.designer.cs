@@ -115,7 +115,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(211, 226);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 23);
+            this.button1.Size = new System.Drawing.Size(131, 31);
             this.button1.TabIndex = 29;
             this.button1.Text = "Thay đổi thông tin";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,6 +136,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_ThongTinTaiKhoan";
             this.Text = "Form_ThongTinTaiKhoan";
+            this.Load += new System.EventHandler(this.Form_ThongTinTaiKhoan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

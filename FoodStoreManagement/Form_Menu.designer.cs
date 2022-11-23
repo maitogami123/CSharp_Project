@@ -1,4 +1,4 @@
-﻿namespace FoodStoreManagement
+﻿namespace FoodStoreManagement.GUI
 {
     partial class Form_Menu
     {
@@ -472,6 +472,7 @@
             this.panel_FormContainer.Name = "panel_FormContainer";
             this.panel_FormContainer.Size = new System.Drawing.Size(1283, 846);
             this.panel_FormContainer.TabIndex = 17;
+            this.panel_FormContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_FormContainer_Paint);
             // 
             // Form_Menu
             // 

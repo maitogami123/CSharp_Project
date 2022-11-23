@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
-    public partial class Form_DatHang : Form
+    public partial class Form_DSMonAn : Form
     {
-        public Form_DatHang()
+        public Form_DSMonAn()
         {
             InitializeComponent();
         }
@@ -28,12 +28,12 @@ namespace FoodStoreManagement
                 images.Images.Add(Image.FromFile(@"C:\Users\ASUS\Desktop\default_image.png"));
             }
             //listView1.LargeImageList = images;
-            listView3.LargeImageList = images;
+            listView1.LargeImageList = images;
 
             for (int itemIndex = 1; itemIndex <= 5; itemIndex++)
             {
                 //listView1.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
-                listView3.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
+                listView1.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
             }
         }
 

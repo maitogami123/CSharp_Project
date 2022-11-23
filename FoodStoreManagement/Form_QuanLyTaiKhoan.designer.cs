@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -40,29 +38,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(203, 99);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 24);
-            this.comboBox2.TabIndex = 18;
-            this.comboBox2.Text = "Chọn thao tác";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(33, 101);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(145, 20);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Đã chọn 1 tài khoản";
-            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -108,16 +85,16 @@
             // textBox2
             // 
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(383, 99);
+            this.textBox2.Location = new System.Drawing.Point(33, 101);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 22);
+            this.textBox2.Size = new System.Drawing.Size(160, 22);
             this.textBox2.TabIndex = 19;
             this.textBox2.Text = "Nhập tên tài khoản";
             // 
             // textBox3
             // 
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
-            this.textBox3.Location = new System.Drawing.Point(536, 99);
+            this.textBox3.Location = new System.Drawing.Point(203, 101);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(162, 22);
             this.textBox3.TabIndex = 20;
@@ -126,7 +103,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(717, 98);
+            this.comboBox3.Location = new System.Drawing.Point(371, 100);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 21;
@@ -134,7 +111,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(853, 97);
+            this.button5.Location = new System.Drawing.Point(500, 99);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(79, 26);
             this.button5.TabIndex = 40;
@@ -143,7 +120,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(938, 98);
+            this.button6.Location = new System.Drawing.Point(585, 100);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(79, 25);
             this.button6.TabIndex = 39;
@@ -152,26 +129,34 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1023, 98);
+            this.button7.Location = new System.Drawing.Point(670, 100);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(79, 25);
             this.button7.TabIndex = 38;
             this.button7.Text = "Xóa";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(755, 100);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(79, 25);
+            this.button8.TabIndex = 41;
+            this.button8.Text = "Clear";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // Form_QuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 569);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.listView1);
@@ -187,9 +172,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListView listView1;
@@ -200,5 +182,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

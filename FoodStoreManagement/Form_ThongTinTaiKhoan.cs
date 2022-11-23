@@ -16,5 +16,10 @@ namespace FoodStoreManagement.GUI
         {
             InitializeComponent();
         }
+
+        private void Form_ThongTinTaiKhoan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace FoodStoreManagement
+﻿namespace FoodStoreManagement.GUI
 {
-    partial class Form_DatHang
+    partial class Form_DSMonAn
     {
         /// <summary>
         /// Required designer variable.
@@ -193,7 +193,7 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "DANH SÁCH MÓN ĂN";
             // 
-            // Form_DatHang
+            // Form_DSMonAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -202,9 +202,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_DatHang";
+            this.Name = "Form_DSMonAn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_DatHang";
+            this.Text = "Form_DSMonAn";
             this.Load += new System.EventHandler(this.Form_DatHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

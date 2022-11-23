@@ -1,4 +1,4 @@
-﻿namespace FoodStoreManagement
+﻿namespace FoodStoreManagement.GUI
 {
     partial class Form_HoaDon
     {
@@ -46,7 +46,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -213,12 +212,11 @@
             this.panel5.Controls.Add(this.textBox3);
             this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.button7);
-            this.panel5.Controls.Add(this.button8);
             this.panel5.Controls.Add(this.textBox6);
             this.panel5.Location = new System.Drawing.Point(43, 528);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(707, 24);
+            this.panel5.Size = new System.Drawing.Size(587, 24);
             this.panel5.TabIndex = 24;
             // 
             // textBox3
@@ -233,7 +231,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(529, 1);
+            this.button5.Location = new System.Drawing.Point(421, 1);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
@@ -243,7 +241,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(632, 1);
+            this.button7.Location = new System.Drawing.Point(512, 1);
             this.button7.Margin = new System.Windows.Forms.Padding(0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
@@ -251,20 +249,10 @@
             this.button7.Text = "Xóa";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(432, 1);
-            this.button8.Margin = new System.Windows.Forms.Padding(0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "Thêm";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // textBox6
             // 
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
-            this.textBox6.Location = new System.Drawing.Point(217, 1);
+            this.textBox6.Location = new System.Drawing.Point(210, 1);
             this.textBox6.Margin = new System.Windows.Forms.Padding(0);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(195, 22);
@@ -322,7 +310,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox6;
     }
 }

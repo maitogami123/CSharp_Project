@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
-    public partial class Form_MatHang : Form
+    public partial class Form_DSNguyenLieu : Form
     {
-        public Form_MatHang()
+        public Form_DSNguyenLieu()
         {
             InitializeComponent();
         }

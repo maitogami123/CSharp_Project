@@ -1,4 +1,4 @@
-﻿namespace FoodStoreManagement
+﻿namespace FoodStoreManagement.GUI
 {
     partial class Form_KhuyenMai
     {

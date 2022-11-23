@@ -35,13 +35,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,14 +48,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.dateTimePicker_Date);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.comboBox4);
             this.panel1.Controls.Add(this.listView2);
@@ -67,14 +65,14 @@
             // 
             // dateTimePicker_Date
             // 
-            this.dateTimePicker_Date.Location = new System.Drawing.Point(630, 38);
+            this.dateTimePicker_Date.Location = new System.Drawing.Point(400, 40);
             this.dateTimePicker_Date.Name = "dateTimePicker_Date";
-            this.dateTimePicker_Date.Size = new System.Drawing.Size(199, 22);
+            this.dateTimePicker_Date.Size = new System.Drawing.Size(260, 22);
             this.dateTimePicker_Date.TabIndex = 64;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(835, 36);
+            this.button1.Location = new System.Drawing.Point(666, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 26);
             this.button1.TabIndex = 63;
@@ -83,7 +81,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(920, 37);
+            this.button2.Location = new System.Drawing.Point(751, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 25);
             this.button2.TabIndex = 62;
@@ -92,7 +90,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1005, 37);
+            this.button3.Location = new System.Drawing.Point(836, 39);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 25);
             this.button3.TabIndex = 61;
@@ -102,7 +100,7 @@
             // textBox4
             // 
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
-            this.textBox4.Location = new System.Drawing.Point(425, 38);
+            this.textBox4.Location = new System.Drawing.Point(195, 40);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(199, 22);
             this.textBox4.TabIndex = 60;
@@ -111,33 +109,11 @@
             // textBox5
             // 
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
-            this.textBox5.Location = new System.Drawing.Point(283, 38);
+            this.textBox5.Location = new System.Drawing.Point(0, 40);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 22);
+            this.textBox5.Size = new System.Drawing.Size(189, 22);
             this.textBox5.TabIndex = 59;
             this.textBox5.Text = "Nhập tên khuyến mãi";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(166, 38);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(112, 24);
-            this.comboBox3.TabIndex = 58;
-            this.comboBox3.Text = "Chọn thao tác";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(0, 40);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(159, 20);
-            this.checkBox2.TabIndex = 57;
-            this.checkBox2.Text = "Đã chọn 1 khuyến mãi";
-            this.checkBox2.UseVisualStyleBackColor = false;
             // 
             // textBox6
             // 
@@ -145,7 +121,7 @@
             this.textBox6.Location = new System.Drawing.Point(169, 0);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(916, 22);
+            this.textBox6.Size = new System.Drawing.Size(831, 22);
             this.textBox6.TabIndex = 56;
             this.textBox6.Text = "Tìm kiếm";
             // 
@@ -189,6 +165,15 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Danh sách khuyến mãi";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1010, -1);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 65;
+            this.button4.Text = "Tìm";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Form_DSKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,12 +202,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
     }
 }
