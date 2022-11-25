@@ -20,8 +20,8 @@ namespace FoodStoreManagement.DAL
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=LAPTOP-82FTS987\\SQLEXPRESS;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
-
+        private string connectionSTR = "Data Source=LAPTOP-523PQA8D;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
+        private string connectionSQL = "Datasource = sql301.epizy.com; username=epiz_33072646;password=48OWwHT8kURdasH; database=epiz_33072646_foodstoremanagement";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
