@@ -301,7 +301,8 @@
     <Content Include="Background\36688761.jpg" />
     <Content Include="Background\50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg" />
     <Content Include="Background\images.jpg" />
-    <Content Include="Imagefile\default_image.png" />
+    <Content Include="Imagefile\Ho_Lo_Chien.jpg" />
+    <Content Include="Imagefile\Tra_Dau.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
