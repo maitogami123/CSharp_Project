@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.ComponentModel;
 
 namespace FoodStoreManagement.DAL
 {
@@ -19,29 +20,31 @@ namespace FoodStoreManagement.DAL
             private set { Ban_DAL.instance = value; }
         }
 
-        public static int TableWidth = 90;
-        public static int TableHeight = 90;
-
         private Ban_DAL() { }
 
-        public void SwitchTable(int id1, int id2)
+        public DataTable LoadTableList()
         {
-            DataProvider.Instance.ExecuteQuery("USP_SwitchTabel @idTable1 , @idTabel2", new object[] { id1, id2 });
-        }
-
-        public List<Ban> LoadTableList()
-        {
-            List<Ban> tableList = new List<Ban>();
+            //BindingList<Ban> tableList = new BindingList<Ban>();
 
             DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTableList");
 
-            foreach (DataRow item in data.Rows)
+            /*foreach (DataRow item in data.Rows)
             {
                 Ban table = new Ban(item);
                 tableList.Add(table);
-            }
+            }*/
 
-            return tableList;
+            return data;
+        }
+        public DataTable DeleteRow(int id)
+        {
+            DataTable data =DataProvider.Instance.ExecuteQuery("DELETE FROM TableFood WHERE id = " + id);
+            return data;
+        }
+        public DataTable AddRow(string value,string status)
+        {
+            DataTable data= DataProvider.Instance.ExecuteQuery("INSERT INTO TableFood(tablefood,status) VALUES (N'"+value+"',N'"+status+")");
+            return data;
         }
     }
 }
