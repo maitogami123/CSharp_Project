@@ -8,18 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
-    public partial class Form2 : Form
+    public partial class Form_DangKy : Form
     {
-        public Form2()
+        Form_DangNhap form1;
+        public Form_DangKy()
         {
             InitializeComponent();
+        }
+        public Form_DangKy(Form_DangNhap form_DangNhap)
+        {
+            InitializeComponent();
+            form1 = form_DangNhap;
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            this.FormClosed += new FormClosedEventHandler(Form_DangKy_FormClosed);
+        }
+        void Form_DangKy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Close();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -65,6 +75,8 @@ namespace FoodStoreManagement
             if(textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && checkBox1.Checked)
             {
                 MessageBox.Show("Tạo tài khoản thành công!");
+                form1.Visible=true;
+                this.Close();
             }
         }
 
@@ -78,6 +90,12 @@ namespace FoodStoreManagement
             label7.Visible = false;
             label8.Visible = false;
             label9.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            form1.Visible = true;
+            this.Close();
         }
     }
 }

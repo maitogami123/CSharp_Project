@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
-    public partial class Form4 : Form
+    public partial class Form_KhuyenMai : Form
     {
-        public Form4()
+        public Form_KhuyenMai()
         {
             InitializeComponent();
         }
 
+        private void Form_KhuyenMai_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

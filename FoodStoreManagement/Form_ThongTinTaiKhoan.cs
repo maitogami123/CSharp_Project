@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStoreManagement
+namespace FoodStoreManagement.GUI
 {
-    public partial class Form5 : Form
+    public partial class Form_ThongTinTaiKhoan : Form
     {
-        public Form5()
+        public Form_ThongTinTaiKhoan()
         {
             InitializeComponent();
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void Form_ThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
 
         }
