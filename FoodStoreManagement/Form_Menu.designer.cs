@@ -298,6 +298,7 @@
             this.button_DSBan.TabIndex = 0;
             this.button_DSBan.Text = "BÀN";
             this.button_DSBan.UseVisualStyleBackColor = true;
+            this.button_DSBan.Click += new System.EventHandler(this.button_DSBan_Click);
             // 
             // panel12
             // 

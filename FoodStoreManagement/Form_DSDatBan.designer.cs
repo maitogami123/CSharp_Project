@@ -1,6 +1,6 @@
 ﻿namespace FoodStoreManagement.GUI
 {
-    partial class Form_Ban
+    partial class Form_DSDatBan
     {
         /// <summary>
         /// Required designer variable.
@@ -58,9 +58,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(-4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.Size = new System.Drawing.Size(150, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bàn";
+            this.label1.Text = "Danh sách đặt bàn";
             // 
             // panel1
             // 
@@ -224,7 +224,7 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // Form_Ban
+            // Form_DSDatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -234,9 +234,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_Ban";
+            this.Name = "Form_DSDatBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_Ban";
+            this.Text = "Form_DSDatBan";
             this.Load += new System.EventHandler(this.Form_Ban_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
