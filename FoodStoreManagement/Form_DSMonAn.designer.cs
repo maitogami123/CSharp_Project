@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            //this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            //this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,8 +42,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            this.panel2.SuspendLayout();
+            //((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            //this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,27 +68,27 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(62, 46);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(90, 20);
-            this.numericUpDown2.TabIndex = 34;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            //this.numericUpDown2.Location = new System.Drawing.Point(62, 46);
+            //this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            //this.numericUpDown2.Name = "numericUpDown2";
+            //this.numericUpDown2.Size = new System.Drawing.Size(90, 20);
+            //this.numericUpDown2.TabIndex = 34;
+            //this.numericUpDown2.Value = new decimal(new int[] {
+            //1,
+            //0,
+            //0,
+            //0});
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(0, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Số lượng:";
+            //this.label1.AutoSize = true;
+            //this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            //this.label1.Location = new System.Drawing.Point(0, 46);
+            //this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            //this.label1.Name = "label1";
+            //this.label1.Size = new System.Drawing.Size(59, 15);
+            //this.label1.TabIndex = 33;
+            //this.label1.Text = "Số lượng:";
             // 
             // button1
             // 
@@ -206,7 +206,7 @@
             this.Load += new System.EventHandler(this.Form_DatHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

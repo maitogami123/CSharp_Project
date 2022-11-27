@@ -229,5 +229,10 @@ namespace FoodStoreManagement.GUI
                 form_DSBan.Visible = false;
             }
         }
+
+        private void button_DSKhuyenMai_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
