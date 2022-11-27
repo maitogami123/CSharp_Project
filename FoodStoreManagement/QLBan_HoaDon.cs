@@ -41,7 +41,7 @@ namespace FoodStoreManagement.GUI
         }
         void LoadTable()
         {
-            flpTable.Controls.Clear();
+            /*flpTable.Controls.Clear();
 
             List<Ban> tableList = Ban_DAL.Instance.LoadTableList();
 
@@ -63,7 +63,7 @@ namespace FoodStoreManagement.GUI
                 }
 
                 flpTable.Controls.Add(btn);
-            }
+            }*/
         }
         void btn_Click(object sender, EventArgs e)
         {

@@ -101,11 +101,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_Ban.cs">
+    <Compile Include="Form_DSBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Ban.designer.cs">
-      <DependentUpon>Form_Ban.cs</DependentUpon>
+    <Compile Include="Form_DSBan.Designer.cs">
+      <DependentUpon>Form_DSBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DSDatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DSDatBan.designer.cs">
+      <DependentUpon>Form_DSDatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_DangKy.cs">
       <SubType>Form</SubType>
@@ -217,8 +223,11 @@
     <Compile Include="QLBan_HoaDon.designer.cs">
       <DependentUpon>QLBan_HoaDon.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form_Ban.resx">
-      <DependentUpon>Form_Ban.cs</DependentUpon>
+    <EmbeddedResource Include="Form_DSBan.resx">
+      <DependentUpon>Form_DSBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DSDatBan.resx">
+      <DependentUpon>Form_DSDatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DangKy.resx">
       <DependentUpon>Form_DangKy.cs</DependentUpon>

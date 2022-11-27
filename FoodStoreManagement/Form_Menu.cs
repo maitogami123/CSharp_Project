@@ -24,9 +24,10 @@ namespace FoodStoreManagement.GUI
         Form_HoaDon form_HoaDon;
         Form_LapHoaDon form_LapHoaDon;
         Form_QuanLyTaiKhoan form_QuanLyTaiKhoan;
-        Form_Ban form_Ban;
+        Form_DSDatBan form_DSDatBan;
         Form_DangNhap form1;
         Form_TrangChu form_TrangChu;
+        Form_DSBan form_DSBan;
         public Form_Menu()
         {
             InitializeComponent();
@@ -71,9 +72,9 @@ namespace FoodStoreManagement.GUI
             form_QuanLyTaiKhoan = new Form_QuanLyTaiKhoan();
             form_QuanLyTaiKhoan.TopLevel = false;
             panel_FormContainer.Controls.Add(form_QuanLyTaiKhoan);
-            form_Ban = new Form_Ban();
-            form_Ban.TopLevel = false;
-            panel_FormContainer.Controls.Add(form_Ban);
+            form_DSBan = new Form_DSBan();
+            form_DSBan.TopLevel = false;
+            panel_FormContainer.Controls.Add(form_DSBan);
             form_TrangChu = new Form_TrangChu();
             form_TrangChu.TopLevel = false;
             panel_FormContainer.Controls.Add(form_TrangChu);
@@ -215,6 +216,18 @@ namespace FoodStoreManagement.GUI
         private void panel_FormContainer_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button_DSBan_Click(object sender, EventArgs e)
+        {
+            if (form_DSBan.Visible == false)
+            {
+                form_DSBan.Visible = true;
+            }
+            else
+            {
+                form_DSBan.Visible = false;
+            }
         }
     }
 }

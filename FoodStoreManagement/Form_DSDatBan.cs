@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace FoodStoreManagement.GUI
 {
-    public partial class Form_Ban : Form
+    public partial class Form_DSDatBan : Form
     {
         string SearchPlaceHolder = "Tìm kiếm";
-        public Form_Ban()
+        public Form_DSDatBan()
         {
             InitializeComponent();
             dateTimePicker_Time.Format = DateTimePickerFormat.Time;
