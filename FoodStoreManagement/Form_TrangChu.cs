@@ -268,5 +268,10 @@ namespace FoodStoreManagement.GUI
                     timer2.Start();
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
