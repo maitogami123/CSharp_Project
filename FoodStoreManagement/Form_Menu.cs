@@ -1,4 +1,5 @@
-﻿using FoodStoreManagement.GUI;
+﻿using DAL;
+using FoodStoreManagement.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,11 +83,21 @@ namespace FoodStoreManagement.GUI
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            this.FormClosed += new FormClosedEventHandler(Form_Menu_FormClosed);
-        }
-        void Form_Menu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            form1.Close();
+            if (AccountDAL.Instance.UserName != null)
+            {
+                button6.Text = AccountDAL.Instance.UserName;
+            }
+            if (AccountDAL.Instance.UserName != "Admin")
+            {
+                button_DSTaiKhoan.Enabled = false;
+            }
+            if (AccountDAL.Instance.UserName != "QL")
+            {
+                button_NhapHang.Enabled = false;
+                button_DSThongKe.Enabled = false;
+                button_DSKhuyenMai.Enabled = false;
+                button_Kho.Enabled = false;
+            }
         }
         private void button_Home_Click(object sender, EventArgs e)
         {
