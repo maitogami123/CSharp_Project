@@ -20,8 +20,13 @@ namespace FoodStoreManagement.DAL
 
         private DataProvider() { }
 
+<<<<<<< Updated upstream
         private string connectionSTR = "Data Source=LAPTOP-523PQA8D;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
         private string connectionSQL = "Datasource = sql301.epizy.com; username=epiz_33072646;password=48OWwHT8kURdasH; database=epiz_33072646_foodstoremanagement";
+=======
+        private string connectionSTR = "Data Source=LAPTOP-IP1RMDOK;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
+
+>>>>>>> Stashed changes
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
