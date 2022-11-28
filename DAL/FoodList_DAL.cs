@@ -4,42 +4,33 @@ namespace FoodStoreManagement.DAL
 {
     public class FoodList_DAL
     {
-        private static FoodList_DAL instance;
+        public static FoodList_DAL instance;
         public static FoodList_DAL Instance
         {
             get { if (instance == null) instance = new FoodList_DAL(); return FoodList_DAL.instance; }
             private set { FoodList_DAL.instance = value; }
-        }
-        private FoodList_DAL() { }
-        public DataTable LoadTableList()
-        {
-            //BindingList<Ban> tableList = new BindingList<Ban>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetFoodList");
-
-            /*foreach (DataRow item in data.Rows)
-            {
-                Ban table = new Ban(item);
-                tableList.Add(table);
-            }*/
-
-            return data;
         }
         public DataTable DeleteRow(int id)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("DELETE FROM Food WHERE id = " + id);
             return data;
         }
-        public DataTable AddRow(string foodName, int idCategoryFood, float price)
+        public DataTable AddRow(string foodName, int idCategory, float price)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("INSERT INTO Food ( FoodName, idCategoryFood, Price) VALUES (N'" + foodName + "', " + idCategoryFood + ", " + price + ")");
+            DataTable data = DataProvider.Instance.ExecuteQuery("INSERT INTO Food (FoodName, idCategoryFood,Price) VALUES(N'"+foodName+"', "+idCategory+", "+price+")");
             return data;
         }
-        public DataTable UpdateRow(int id, string foodName, int idCategoryFood, float price)
+        public DataTable UpdateRow(int id, string foodName, int idCategory, float price)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("UPDATE Food SET FoodName= N'" + foodName + "', Price =" + price + " WHERE id =" + id);
             return data;
         }
+        public DataTable LoadTableList()
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetFoodList");
+            return data;
+        }
+         
         public DataTable SearchType(string category)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT dbo.Food.id, FoodName,idCategoryFood,Price FROM dbo.Food ,dbo.CategoryFood WHERE dbo.Food.idCategoryFood = dbo.CategoryFood.id AND category=N'" + category + "' ");
@@ -59,12 +50,12 @@ namespace FoodStoreManagement.DAL
         }
         public DataTable FilterFoodNameASC()
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Food ORDER BY foodName ");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Food ORDER BY FoodName ");
             return data;
         }
         public DataTable FilterFoodNameDESC()
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Food ORDER BY foodName DESC ");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Food ORDER BY FoodName DESC ");
             return data;
         }
 

@@ -106,6 +106,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodStore_ManagermentDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FoodStore_ManagermentDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodStore_ManagermentDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddAccount.Designer.cs">
+      <DependentUpon>Form_AddAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AddFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +237,12 @@
     <Compile Include="Form_TrangChu.designer.cs">
       <DependentUpon>Form_TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_UpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UpdateAccount.Designer.cs">
+      <DependentUpon>Form_UpdateAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_UpdateFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +257,9 @@
     <Compile Include="QLBan_HoaDon.designer.cs">
       <DependentUpon>QLBan_HoaDon.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_AddAccount.resx">
+      <DependentUpon>Form_AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_AddFood.resx">
       <DependentUpon>Form_AddFood.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +320,9 @@
     <EmbeddedResource Include="Form_TrangChu.resx">
       <DependentUpon>Form_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_UpdateAccount.resx">
+      <DependentUpon>Form_UpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_UpdateFood.resx">
       <DependentUpon>Form_UpdateFood.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +348,17 @@
     </None>
     <None Include="FoodStore_ManagermentDataSet.xss">
       <DependentUpon>FoodStore_ManagermentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet1.xsc">
+      <DependentUpon>FoodStore_ManagermentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FoodStore_ManagermentDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet1.xss">
+      <DependentUpon>FoodStore_ManagermentDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

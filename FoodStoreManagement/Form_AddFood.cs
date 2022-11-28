@@ -12,7 +12,7 @@ namespace FoodStoreManagement.GUI
             label5.Hide();
             label6.Hide();
             label7.Hide();
-
+            
         }
 
 
@@ -26,14 +26,7 @@ namespace FoodStoreManagement.GUI
             dt = FoodList_DAL.Instance.ValidateAddForm__idCategory();
             foreach (DataRow dr in dt.Rows)
             {
-                MessageBox.Show(input.ToString());
                 if (dr["id"].ToString() == input.ToString()) return true;
-                //if (dr.ToString().Equals(input)) return true;
-                //foreach (DataColumn dc in dr.ItemArray)
-                //{
-                //    if (dr[dc].Equals(input)) return true;
-                //}
-
             }
             return false;
 
