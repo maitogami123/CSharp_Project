@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ban_DAL.cs" />
+    <Compile Include="Bill_DAL.cs" />
     <Compile Include="Data_Provider.cs" />
     <Compile Include="FoodList_DAL.cs" />
     <Compile Include="Program.cs" />
