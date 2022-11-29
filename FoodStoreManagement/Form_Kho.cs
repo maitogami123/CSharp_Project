@@ -68,12 +68,14 @@ namespace FoodStoreManagement.GUI
             
             dataBUS.insertData(warehouseIngredientDTO);
             dataGridView1.DataSource = dataBUS.getData();
+            
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             
+
         }
     }
 }
