@@ -65,15 +65,9 @@ namespace FoodStoreManagement.GUI
             string idRequireAdd = textBox6.Text;
             string idStaff = comboBox3.Text;
             WarehouseIngredientDTO warehouseIngredientDTO = new WarehouseIngredientDTO(idFood,status, time, idRequireAdd,idStaff);
-            if (dataBUS.insertData(warehouseIngredientDTO))
-            {
-                MessageBox.Show("Thành công");
-                dataGridView1.DataSource= dataBUS.getData();
-            }
-            else
-            {
-                MessageBox.Show("Không thành công");
-            }
+            
+            dataBUS.insertData(warehouseIngredientDTO);
+            dataGridView1.DataSource = dataBUS.getData();
 
         }
 

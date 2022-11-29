@@ -32,8 +32,9 @@ namespace DAL
             }
             return data;
         }
-        public bool func(string query, WarehouseIngredientDTO dataDTO)
+        public DataTable func(string query, WarehouseIngredientDTO dataDTO)
         {
+            DataTable dataDAL = new DataTable();
             using (SqlConnection _conn = new SqlConnection(_connString))
             {
                 try
@@ -42,7 +43,7 @@ namespace DAL
                     SqlCommand sqlComm = new SqlCommand(query, _conn);
                     if (sqlComm.ExecuteNonQuery() > 1)
                     {
-                        return true;
+                        return dataDAL;
                     }
                 }
                 catch (Exception ex)
@@ -52,7 +53,7 @@ namespace DAL
                 finally { _conn.Close(); }
 
             }
-            return false;
+            return dataDAL;
         }
     }
 }

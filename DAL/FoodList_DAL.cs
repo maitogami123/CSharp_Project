@@ -27,7 +27,7 @@ namespace FoodStoreManagement.DAL
         }
         public DataTable LoadTableList()
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetFoodList");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Food");
             return data;
         }
          

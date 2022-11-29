@@ -16,11 +16,11 @@ namespace BLL
         {
             return dataDAL.getData();
         }
-        public bool insertData(WarehouseIngredientDTO dataDTO)
+        public DataTable insertData(WarehouseIngredientDTO dataDTO)
         {
             return dataDAL.insertData(dataDTO); 
         }
-        public bool updateData(WarehouseIngredientDTO dataDTO)
+        public DataTable updateData(WarehouseIngredientDTO dataDTO)
         {
             return dataDAL.updateData(dataDTO);
         }

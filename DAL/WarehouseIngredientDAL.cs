@@ -19,13 +19,13 @@ namespace DAL
             return funcDAL.getData(query);
         }
 
-        public bool insertData(WarehouseIngredientDTO dataDTO)
+        public DataTable insertData(WarehouseIngredientDTO dataDTO)
         {
             query = string.Format("insert into WarehouseIngredient values({0},'{1}','{2}','{3}','{4}')",dataDTO.IdFood,dataDTO.Status, dataDTO.WarehouseDayAdd,dataDTO.IdRequireAdd, dataDTO.IdStaffAddtoWarehouse);
             return funcDAL.func(query, dataDTO);
         }
 
-        public bool updateData(WarehouseIngredientDTO dataDTO)
+        public DataTable updateData(WarehouseIngredientDTO dataDTO)
         {
             query = string.Format("update WarehouseIngredient set idFood = {0}, Status = '{1}', WarehouseDayAdd = '{2}', idRequireAdd = '{3}', idStaffAddtoWarehouse = '{4}'", 
                 dataDTO.IdFood, dataDTO.Status, dataDTO.WarehouseDayAdd, dataDTO.IdRequireAdd, dataDTO.IdStaffAddtoWarehouse);
