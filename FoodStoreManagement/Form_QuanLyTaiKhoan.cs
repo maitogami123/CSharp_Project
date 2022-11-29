@@ -13,6 +13,7 @@ namespace FoodStoreManagement.GUI
         public Form_QuanLyTaiKhoan()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             LoadTable();
             textBox1.LostFocus += TextBox1_LostFocus;
             textBox1.GotFocus += TextBox1_GotFocus;

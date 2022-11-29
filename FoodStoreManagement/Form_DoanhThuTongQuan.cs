@@ -15,6 +15,7 @@ namespace FoodStoreManagement.GUI
         public Form_DoanhThuTongQuan()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void Form_DoanhThuTongQuan_Load(object sender, EventArgs e)

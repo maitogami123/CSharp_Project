@@ -16,6 +16,7 @@ namespace FoodStoreManagement.GUI
         public Form_HoaDon()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             loadtable();
         }
         void loadtable()

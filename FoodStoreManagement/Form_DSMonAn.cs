@@ -10,6 +10,7 @@ namespace FoodStoreManagement.GUI
         public Form_DSMonAn()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             loadtable();
         }
         void loadtable()
@@ -114,13 +115,6 @@ namespace FoodStoreManagement.GUI
 
         private void label2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Form_DSMonAn_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'foodStore_ManagermentDataSet.CategoryFood' table. You can move, or remove it, as needed.
-            this.categoryFoodTableAdapter.Fill(this.foodStore_ManagermentDataSet.CategoryFood);
 
         }
 

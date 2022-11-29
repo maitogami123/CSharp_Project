@@ -16,6 +16,7 @@ namespace FoodStoreManagement.GUI
         public Form_UpdateAccount(string userName, string displayUserName, string passWord, string typeAccount)
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             textBox1.Text = userName;
             textBox3.Text = displayUserName;
             textBox2.Text = passWord;

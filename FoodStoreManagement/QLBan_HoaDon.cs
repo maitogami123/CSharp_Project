@@ -21,6 +21,7 @@ namespace FoodStoreManagement.GUI
         public QLBan_HoaDon()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             LoadTable();
         }
         private void btnAddFood_Click(object sender, EventArgs e)

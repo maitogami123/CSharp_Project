@@ -17,6 +17,7 @@ namespace FoodStoreManagement
         public Form_DSBan()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             loadtable();
         }
 

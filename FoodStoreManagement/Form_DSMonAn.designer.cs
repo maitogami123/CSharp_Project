@@ -277,7 +277,6 @@
             this.Name = "Form_DSMonAn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_DSMonAn";
-            this.Load += new System.EventHandler(this.Form_DSMonAn_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

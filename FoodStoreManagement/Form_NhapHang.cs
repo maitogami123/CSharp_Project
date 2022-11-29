@@ -15,6 +15,7 @@ namespace FoodStoreManagement.GUI
         public Form_NhapHang()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void Form_NhapHang_Load(object sender, EventArgs e)

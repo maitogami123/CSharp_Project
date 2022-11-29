@@ -16,6 +16,7 @@ namespace FoodStoreManagement.GUI
         public Form_UpdateFood(int id, string foodName, int idCategory, float price)
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             textBox4.Text = id.ToString();
             textBox1.Text = foodName;
             textBox3.Text = idCategory.ToString();

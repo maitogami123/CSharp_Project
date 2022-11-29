@@ -8,7 +8,7 @@ namespace DAL
 {
     public class FunctionsDAL
     {
-        private string _connString = "Data Source=LAPTOP-IP1RMDOK;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
+        private string _connString = "Data Source=SAPLING\\SAPLING;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
         public DataTable getData(string query)
         {
             DataTable data = new DataTable();

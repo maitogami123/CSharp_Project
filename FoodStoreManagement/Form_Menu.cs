@@ -35,6 +35,7 @@ namespace FoodStoreManagement.GUI
             form_NhapHang = new Form_NhapHang();
             form_NhapHang.TopLevel = false;
             panel_FormContainer.Controls.Add(form_NhapHang);
+            
         }
         public Form_Menu(Form_DangNhap form_DangNhap)
         {
@@ -81,6 +82,22 @@ namespace FoodStoreManagement.GUI
             panel_FormContainer.Controls.Add(form_TrangChu);
         }
 
+        private void handleHideForm()
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name.Equals("Form_Menu"))
+                {
+                    continue;
+                }
+                else
+                {
+                    f.Visible = false;
+                }
+            }
+            
+        }
+
         private void Form5_Load(object sender, EventArgs e)
         {
             if (AccountDAL.Instance.UserName != null)
@@ -101,6 +118,7 @@ namespace FoodStoreManagement.GUI
         }
         private void button_Home_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_TrangChu.Visible == false)
             {
                 form_TrangChu.Visible = true;
@@ -113,6 +131,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_DatHang_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_DatHang.Visible == false)
             {
                 form_DatHang.Visible = true;
@@ -125,6 +144,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_DatBan_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_DatBan.Visible == false)
             {
                 form_DatBan.Visible = true;
@@ -137,6 +157,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_GioHang_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_GioHang.Visible == false)
             {
                 form_GioHang.Visible = true;
@@ -149,6 +170,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_DSTaiKhoan_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_QuanLyTaiKhoan.Visible == false)
             {
                 form_QuanLyTaiKhoan.Visible = true;
@@ -161,6 +183,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_Kho_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_Kho.Visible == false)
             {
                 form_Kho.Visible = true;
@@ -173,6 +196,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_DSThongKe_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_DoanhThuTongQuan.Visible == false)
             {
                 form_DoanhThuTongQuan.Visible = true;
@@ -185,6 +209,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_DSSanPham_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_MatHang.Visible == false)
             {
                 form_MatHang.Visible = true;
@@ -197,6 +222,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_DSKhuyenMai_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_DSKhuyenMai.Visible == false)
             {
                 form_DSKhuyenMai.Visible = true;
@@ -209,6 +235,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_NhapHang_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_NhapHang.Visible==false)
             {
                 form_NhapHang.Visible = true;

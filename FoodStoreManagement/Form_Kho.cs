@@ -12,6 +12,7 @@ namespace FoodStoreManagement.GUI
         public Form_Kho()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             dataGridView1.DataSource = null;
         }
 
