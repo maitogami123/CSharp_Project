@@ -249,6 +249,7 @@
             this.button_DSKhuyenMai.TabIndex = 0;
             this.button_DSKhuyenMai.Text = "KHUYẾN MÃI";
             this.button_DSKhuyenMai.UseVisualStyleBackColor = true;
+            this.button_DSKhuyenMai.Click += new System.EventHandler(this.button_DSKhuyenMai_Click_1);
             // 
             // panel8
             // 

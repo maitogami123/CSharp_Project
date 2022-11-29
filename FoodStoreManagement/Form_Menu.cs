@@ -240,5 +240,11 @@ namespace FoodStoreManagement.GUI
                 form_DSBan.Visible = false;
             }
         }
+
+        private void button_DSKhuyenMai_Click_1(object sender, EventArgs e)
+        {
+            Form_KhuyenMai form_KhuyenMai = new Form_KhuyenMai();
+            form_KhuyenMai.Show();
+        }
     }
 }
