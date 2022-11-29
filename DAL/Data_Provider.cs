@@ -32,7 +32,7 @@ namespace FoodStoreManagement.DAL
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -46,6 +46,9 @@ namespace FoodStoreManagement.DAL
                         }
                     }
                 }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
                 adapter.Fill(data);
 
                 connection.Close();
@@ -63,6 +66,7 @@ namespace FoodStoreManagement.DAL
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
+
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -76,6 +80,7 @@ namespace FoodStoreManagement.DAL
                         }
                     }
                 }
+
                 data = command.ExecuteNonQuery();
 
                 connection.Close();
@@ -93,6 +98,7 @@ namespace FoodStoreManagement.DAL
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
+
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -106,6 +112,7 @@ namespace FoodStoreManagement.DAL
                         }
                     }
                 }
+
                 data = command.ExecuteScalar();
 
                 connection.Close();
