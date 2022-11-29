@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.ComponentModel;
+using Google.Protobuf.WellKnownTypes;
 
 namespace FoodStoreManagement.DAL
 {
@@ -26,7 +27,7 @@ namespace FoodStoreManagement.DAL
         {
             //BindingList<Ban> tableList = new BindingList<Ban>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTableList");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM TableFood");
 
             /*foreach (DataRow item in data.Rows)
             {
@@ -43,7 +44,17 @@ namespace FoodStoreManagement.DAL
         }
         public DataTable AddRow(string value,string status)
         {
-            DataTable data= DataProvider.Instance.ExecuteQuery("INSERT INTO TableFood(tablefood,status) VALUES (N'"+value+"',N'"+status+")");
+            DataTable data= DataProvider.Instance.ExecuteQuery("INSERT INTO TableFood(tablefood,status) VALUES (N'"+value+"',N'"+status+"')");
+            return data;
+        }
+        public DataTable UpdateRow(string id, string value,string status)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("UPDATE TableFood SET tablefood = N'"+value+"',status = N'"+status+"' WHERE id = "+id);
+            return data;
+        }
+        public DataTable SearchTable(string name,string table)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM TableFood WHERE "+table+" LIKE '%" + name + "%' OR "+table+" = N'"+name+"'");
             return data;
         }
     }

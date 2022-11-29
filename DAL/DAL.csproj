@@ -83,6 +83,8 @@
   <ItemGroup>
     <Compile Include="Ban_DAL.cs" />
     <Compile Include="Data_Provider.cs" />
+    <Compile Include="DatBan_DAL.cs" />
+    <Compile Include="KhachHang_DAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
