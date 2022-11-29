@@ -81,7 +81,7 @@ namespace FoodStoreManagement.GUI
             {
                 pictureBoxes_newdish[i].Size = new Size(150, 157);
                 pictureBoxes_newdish[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(directoryName+ @"\Imagefile\default_image.png"));
+                pictureBoxes_newdish[i].Image = new Bitmap(Image.FromFile(directoryName + @"\Imagefile\Ho_Lo_Chien.jpg"));
             }
             pictureBoxes_newdish[0].Location = new Point(0, 0);
             for (int i = 1; i < pictureBoxes_newdish.Count; i++)
@@ -272,6 +272,18 @@ namespace FoodStoreManagement.GUI
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            var khuyenMai = new Form_DSKhuyenMai();
+            khuyenMai.Show();
+           
         }
     }
 }

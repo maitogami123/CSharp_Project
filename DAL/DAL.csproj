@@ -83,12 +83,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ban_DAL.cs" />
+    <Compile Include="Bill_DAL.cs" />
     <Compile Include="Data_Provider.cs" />
     <Compile Include="DiscountDetailDAL.cs" />
     <Compile Include="FunctionsDAL.cs" />
+    <Compile Include="WarehouseIngredientDAL.cs" />
+    <Compile Include="FoodList_DAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WarehouseIngredientDAL.cs" />
+    <Compile Include="QuanLyTaiKhoan_DAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

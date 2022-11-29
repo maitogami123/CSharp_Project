@@ -101,6 +101,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodStore_ManagermentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodStore_ManagermentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FoodStore_ManagermentDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodStore_ManagermentDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddAccount.Designer.cs">
+      <DependentUpon>Form_AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddFood.Designer.cs">
+      <DependentUpon>Form_AddFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_DSBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +237,18 @@
     <Compile Include="Form_TrangChu.designer.cs">
       <DependentUpon>Form_TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_UpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UpdateAccount.Designer.cs">
+      <DependentUpon>Form_UpdateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UpdateFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UpdateFood.Designer.cs">
+      <DependentUpon>Form_UpdateFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLBan_HoaDon.cs">
@@ -223,6 +257,12 @@
     <Compile Include="QLBan_HoaDon.designer.cs">
       <DependentUpon>QLBan_HoaDon.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_AddAccount.resx">
+      <DependentUpon>Form_AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AddFood.resx">
+      <DependentUpon>Form_AddFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_DSBan.resx">
       <DependentUpon>Form_DSBan.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +320,12 @@
     <EmbeddedResource Include="Form_TrangChu.resx">
       <DependentUpon>Form_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_UpdateAccount.resx">
+      <DependentUpon>Form_UpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UpdateFood.resx">
+      <DependentUpon>Form_UpdateFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -292,6 +338,28 @@
     <EmbeddedResource Include="QLBan_HoaDon.resx">
       <DependentUpon>QLBan_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="FoodStore_ManagermentDataSet.xsc">
+      <DependentUpon>FoodStore_ManagermentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FoodStore_ManagermentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet.xss">
+      <DependentUpon>FoodStore_ManagermentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet1.xsc">
+      <DependentUpon>FoodStore_ManagermentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FoodStore_ManagermentDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FoodStore_ManagermentDataSet1.xss">
+      <DependentUpon>FoodStore_ManagermentDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -311,6 +379,8 @@
     <Content Include="Background\50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg" />
     <Content Include="Background\images.jpg" />
     <Content Include="Imagefile\default_image.png" />
+    <Content Include="Imagefile\Ho_Lo_Chien.jpg" />
+    <Content Include="Imagefile\Tra_Dau.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
