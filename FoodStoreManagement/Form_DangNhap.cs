@@ -1,5 +1,4 @@
-﻿using DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +12,8 @@ namespace FoodStoreManagement.GUI
 {
     public partial class Form_DangNhap : Form
     {
+        string UsernameLogin="u";
+        string PasswordLogin="1";
         string UsernamePlaceHolder = "Enter Your Username";
         string PasswordPlaceHolder = "Enter Your Password";
         public Form_DangNhap()
@@ -91,17 +92,6 @@ namespace FoodStoreManagement.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = UsernameTextBox.Text;
-            string password = PasswordTextBox.Text;
-            if (Login(username, password))
-            {
-                Form_Menu f = new Form_Menu();
-                AccountDAL.Instance.UserName = UsernameTextBox.Text;
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-
-            }
             if (UsernameTextBox.Text == UsernamePlaceHolder)
             {
                 label6.Visible = true;
@@ -117,14 +107,16 @@ namespace FoodStoreManagement.GUI
                 label7.Visible = false;
             if (UsernameTextBox.Text != UsernamePlaceHolder && PasswordTextBox.Text != PasswordPlaceHolder)
             {
-
-                label7.Text = "Nhập sai tên tài khoản hoặc mật khẩu";
-                label7.Visible = true;
+                if (UsernameTextBox.Text == UsernameLogin && PasswordTextBox.Text == PasswordLogin)
+                {
+                    Form_Menu frm = new Form_Menu(this);
+                    frm.Show();
+                    this.Visible = false;
+                }
+                else
+                    label7.Text = "Nhập sai tên tài khoản hoặc mật khẩu";
+                    label7.Visible = true;
             }
-        }
-        bool Login(string username, string password)
-        {
-            return AccountDAL.Instance.Login(username, password);
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -132,14 +124,6 @@ namespace FoodStoreManagement.GUI
             Form_DangKy frm = new Form_DangKy(this);
             frm.Show();
             this.Visible = false;
-        }
-
-        private void Form_DangNhap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
         }
     }
 }
