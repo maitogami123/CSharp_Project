@@ -17,7 +17,8 @@ namespace FoodStoreManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_DangNhap());
+            //Form1 form1 = new Form1();
+            Application.Run(new Form_TrangChu());
         }
     }
 }
