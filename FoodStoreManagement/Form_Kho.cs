@@ -59,55 +59,27 @@ namespace FoodStoreManagement.GUI
 
         private void button8_Click(object sender, EventArgs e)
         {
+            int idFood = Convert.ToInt16(textBox2.Text);
             string status = textBox3.Text;
+            DateTime time = Convert.ToDateTime(dateTimePicker_Date.Text);
             string idRequireAdd = textBox6.Text;
-            string idStafftoAddWarehouse = comboBox3.Text;
-            if (textBox3.Text != "" && textBox2.Text != "" && textBox6.Text != "")
+            string idStaff = comboBox3.Text;
+            WarehouseIngredientDTO warehouseIngredientDTO = new WarehouseIngredientDTO(idFood,status, time, idRequireAdd,idStaff);
+            if (dataBUS.insertData(warehouseIngredientDTO))
             {
-                int id = Convert.ToInt32(textBox2.Text);
-                DateTime time = Convert.ToDateTime(dateTimePicker_Date.Text);
-                WarehouseIngredientDTO dataDTO = new WarehouseIngredientDTO(id, status, time, idRequireAdd, idStafftoAddWarehouse);
-                if (dataBUS.insertData(dataDTO))
-                {
-                    MessageBox.Show("Thành công");
-                }
-                else
-                {
-                    MessageBox.Show("Không thành công");
-                }
+                MessageBox.Show("Thành công");
+                dataGridView1.DataSource= dataBUS.getData();
             }
             else
             {
-                MessageBox.Show("Nhập thông tin");
+                MessageBox.Show("Không thành công");
             }
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                string status = textBox3.Text;
-                string idRequireAdd = textBox6.Text;
-                string idStafftoAddWarehouse = comboBox3.Text;
-                DateTime time = Convert.ToDateTime(dateTimePicker_Date.Text);
-                ListViewItem item = listView1.SelectedItems[0];
-                int id = Convert.ToInt32(textBox2.Text);
-
-                WarehouseIngredientDTO dataDTO = new WarehouseIngredientDTO(id, status, time, idRequireAdd, idStafftoAddWarehouse);
-                if(dataBUS.updateData(dataDTO))
-                {
-                    MessageBox.Show("Thành Công");
-                    listView1.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Không thành công");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chưa chọn đối tượng");
-            }
+            
         }
     }
 }

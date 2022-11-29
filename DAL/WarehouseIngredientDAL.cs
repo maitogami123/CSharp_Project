@@ -21,8 +21,7 @@ namespace DAL
 
         public bool insertData(WarehouseIngredientDTO dataDTO)
         {
-            query = string.Format("insert into WarehouseIngredient(idFood, Status, WarehouseDayAdd, idRequireAdd, idStaffAddtoWarehouse) values({0},'{1}','{2}','{3}','{4}')",
-                dataDTO.IdFood, dataDTO.Status, dataDTO.WarehouseDayAdd, dataDTO.IdRequireAdd, dataDTO.IdStaffAddtoWarehouse);
+            query = string.Format("insert into WarehouseIngredient values({0},'{1}','{2}','{3}','{4}')",dataDTO.IdFood,dataDTO.Status, dataDTO.WarehouseDayAdd,dataDTO.IdRequireAdd, dataDTO.IdStaffAddtoWarehouse);
             return funcDAL.func(query, dataDTO);
         }
 
