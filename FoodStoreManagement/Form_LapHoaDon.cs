@@ -15,6 +15,7 @@ namespace FoodStoreManagement.GUI
         public Form_LapHoaDon()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void Form_LapHoaDon_Load(object sender, EventArgs e)

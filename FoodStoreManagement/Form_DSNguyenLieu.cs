@@ -15,6 +15,7 @@ namespace FoodStoreManagement.GUI
         public Form_DSNguyenLieu()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void Form_MatHang_Load(object sender, EventArgs e)

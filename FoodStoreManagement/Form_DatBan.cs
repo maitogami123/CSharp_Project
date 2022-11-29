@@ -15,6 +15,7 @@ namespace FoodStoreManagement.GUI
         public Form_DatBan()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             dateTimePicker_Time.Format = DateTimePickerFormat.Time;
             dateTimePicker_Time.ShowUpDown = true;
             dateTimePicker_Time.Value = DateTime.Now;

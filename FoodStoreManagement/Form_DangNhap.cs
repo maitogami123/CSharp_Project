@@ -95,7 +95,7 @@ namespace FoodStoreManagement.GUI
             string password = PasswordTextBox.Text;
             if (Login(username, password))
             {
-                Form_Menu f = new Form_Menu();
+                Form_Menu f = new Form_Menu(this);
                 AccountDAL.Instance.UserName = UsernameTextBox.Text;
                 this.Hide();
                 f.ShowDialog();
