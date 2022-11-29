@@ -11,8 +11,7 @@ namespace FoodStoreManagement.GUI
         public Form_Kho()
         {
             InitializeComponent();
-            Header();
-            show();
+            
         }
 
         private void Form_Kho_Load(object sender, EventArgs e)
@@ -25,36 +24,36 @@ namespace FoodStoreManagement.GUI
         {
             this.Visible = false;
         }
-        public void Header()
-        {
+        //public void Header()
+        //{
                 
-            listView1.Columns.Add("Mã nguyên liệu");
-            listView1.Columns.Add("Tình trạng");
-            listView1.Columns.Add("Ngày nhập");
-            listView1.Columns.Add("Số lượng");
-            listView1.Columns.Add("Mã nhân viên");
-            listView1.View = View.Details;
-        }
+        //    listView1.Columns.Add("Mã nguyên liệu");
+        //    listView1.Columns.Add("Tình trạng");
+        //    listView1.Columns.Add("Ngày nhập");
+        //    listView1.Columns.Add("Số lượng");
+        //    listView1.Columns.Add("Mã nhân viên");
+        //    listView1.View = View.Details;
+        //}
         WarehouseIngredientBUS dataBUS = new WarehouseIngredientBUS();
-        public void show()
-        {
-            DataTable data = new DataTable();
-            data = dataBUS.getData();
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                DataRow dataRow = data.Rows[i];
-                ListViewItem item = new ListViewItem(dataRow[0].ToString());
-                ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem(item, dataRow[0].ToString());
-                item.SubItems.Add(dataRow[1].ToString());
-                item.SubItems.Add(dataRow[2].ToString());
-                item.SubItems.Add(dataRow[3].ToString());
-                item.SubItems.Add(dataRow[4].ToString());
-                listView1.Items.Add(item);
-            }
-            listView1.View = View.Details;
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
+        //public void show()
+        //{
+        //    DataTable data = new DataTable();
+        //    data = dataBUS.getData();
+        //    for (int i = 0; i < data.Rows.Count; i++)
+        //    {
+        //        DataRow dataRow = data.Rows[i];
+        //        ListViewItem item = new ListViewItem(dataRow[0].ToString());
+        //        ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem(item, dataRow[0].ToString());
+        //        item.SubItems.Add(dataRow[1].ToString());
+        //        item.SubItems.Add(dataRow[2].ToString());
+        //        item.SubItems.Add(dataRow[3].ToString());
+        //        item.SubItems.Add(dataRow[4].ToString());
+        //        listView1.Items.Add(item);
+        //    }
+        //    listView1.View = View.Details;
+        //    listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+        //    listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        //}
 
 
 

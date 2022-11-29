@@ -54,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
@@ -106,12 +107,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(699, 261);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 31);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(246, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 395);
             this.dataGridView1.TabIndex = 44;
             // 
             // comboBox3
@@ -237,7 +238,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1003, 474);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

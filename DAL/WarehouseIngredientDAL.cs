@@ -15,7 +15,7 @@ namespace DAL
         public WarehouseIngredientDAL() { }
         public DataTable getData()
         {
-            query = string.Format("select * from WarehouseIngredient");
+            query = string.Format("select idFood as [Mã thức ăn], Status as [Tình trạng], WarehouseDayAdd as [Ngày Nhập], idRequireAdd as [Số Lượng], idStaffAddtoWarehouse as [Mã nhân viên] from WarehouseIngredient");
             return funcDAL.getData(query);
         }
 
