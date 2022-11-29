@@ -20,9 +20,8 @@ namespace FoodStoreManagement.DAL
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=LAPTOP-523PQA8D;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
-        private string connectionSQL = "Datasource = sql301.epizy.com; username=epiz_33072646;password=48OWwHT8kURdasH; database=epiz_33072646_foodstoremanagement";
-master
+        private string connectionSTR = "Data Source=;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -32,7 +31,7 @@ master
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -46,9 +45,6 @@ master
                         }
                     }
                 }
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-
                 adapter.Fill(data);
 
                 connection.Close();
@@ -66,7 +62,6 @@ master
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -80,7 +75,6 @@ master
                         }
                     }
                 }
-
                 data = command.ExecuteNonQuery();
 
                 connection.Close();
@@ -98,7 +92,6 @@ master
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -112,7 +105,6 @@ master
                         }
                     }
                 }
-
                 data = command.ExecuteScalar();
 
                 connection.Close();
