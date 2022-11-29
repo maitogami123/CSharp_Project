@@ -115,11 +115,17 @@ namespace FoodStoreManagement.Form_Add
         private void BringInfo()
         {
             DataTable data = DatBan_DAL.Instance.SearchTable(id.ToString(), "idDatBan");
-            DataTable DSidBan = DatBan_DAL.Instance.GetidBan();
-            DataTable DSidKH = DatBan_DAL.Instance.GetidKH();
+            //DataTable DSidBan = DatBan_DAL.Instance.GetidBan();
+            //DataTable DSidKH = DatBan_DAL.Instance.GetidKH();
 
             dateTimePicker_Time.Value = DateTime.Parse(data.Rows[0]["ThoiGian"].ToString());
-            dateTimePicker_Date.Value = DateTime.Parse(data.Rows[0]["Ngay"].ToString());
+            if (DateTime.Parse(data.Rows[0]["Ngay"].ToString()) < DateTime.Today)
+            {
+                dateTimePicker_Date.Value = DateTime.Today;
+            }
+            else
+                dateTimePicker_Date.Value = DateTime.Parse(data.Rows[0]["Ngay"].ToString());
+
             comboBox3.SelectedValue = data.Rows[0]["idBan"];
             comboBox1.SelectedValue = data.Rows[0]["idKH"];
             //for (int i = 0; i < DSidBan.Rows.Count; i++)

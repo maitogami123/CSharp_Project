@@ -34,6 +34,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -50,11 +51,11 @@
             this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoNguoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +70,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(634, 21);
+            this.button5.Location = new System.Drawing.Point(466, 21);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(86, 30);
             this.button5.TabIndex = 18;
@@ -79,7 +80,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(380, 21);
+            this.button6.Location = new System.Drawing.Point(284, 21);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(86, 30);
             this.button6.TabIndex = 17;
@@ -125,6 +126,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(867, 415);
             this.panel3.TabIndex = 14;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Location = new System.Drawing.Point(31, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(801, 78);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thao tác";
             // 
             // button1
             // 
@@ -287,17 +301,15 @@
             this.SoNguoi.Name = "SoNguoi";
             this.SoNguoi.ReadOnly = true;
             // 
-            // groupBox1
+            // button3
             // 
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Location = new System.Drawing.Point(31, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(801, 78);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.button3.Location = new System.Drawing.Point(634, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(106, 30);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Xóa đặt bàn cũ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form_DSDatBan
             // 
@@ -316,8 +328,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,5 +358,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

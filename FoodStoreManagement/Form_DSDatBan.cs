@@ -85,15 +85,8 @@ namespace FoodStoreManagement.GUI
             dataGridView2.Columns[4].DataPropertyName = "Ngay";
             dataGridView2.Columns[5].HeaderText = "Số người";
             dataGridView2.Columns[5].DataPropertyName = "SoNguoi";
-            //BindingList<Ban> tableList = Ban_DAL.Instance.LoadTableList();
-            //DataTable h = DatBan_DAL.Instance.LoadTableList();
-            //for(int i=0; i<h.Rows.Count;i++)
-            //{
-            //    if (DateTime.Parse(h.Rows[i]["Ngay"].ToString())<DateTime.Today)
-            //    {
-            //        DatBan_DAL.Instance.DeleteRow(h.Rows[i]["idDatBan"].ToString());
-            //    }    
-            //}
+            
+            
             dataGridView2.DataSource = DatBan_DAL.Instance.LoadTableList();
         }
         private void loadcombox()
@@ -138,14 +131,13 @@ namespace FoodStoreManagement.GUI
             //}
             return dup;
         }
-
+        
         private void button7_Click(object sender, EventArgs e)
         {
             if (dataGridView2.SelectedRows.Count > 1)
             {
                 return;
             }
-
             if (dataGridView2.SelectedRows.Count == 1)
             {
                 Form_AddDatBan addDat = new Form_AddDatBan(iddatban);
@@ -363,6 +355,14 @@ namespace FoodStoreManagement.GUI
         {
             dataGridView2.DataSource = null;
             dataGridView2.DataSource=DatBan_DAL.Instance.LoadTableList();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form_DeleteOldDatBan ff= new Form_DeleteOldDatBan();
+            ff.Show();
+            dataGridView2.DataSource = null;
+            dataGridView2.DataSource = DatBan_DAL.Instance.LoadTableList();
         }
     }
 }
