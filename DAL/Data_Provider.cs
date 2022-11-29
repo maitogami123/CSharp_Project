@@ -20,7 +20,7 @@ namespace FoodStoreManagement.DAL
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=LAPTOP-82FTS987\\SQLEXPRESS;Initial Catalog=FoodStore_Managerment1;Integrated Security=True";
+        private string connectionSTR = "Data Source=;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
