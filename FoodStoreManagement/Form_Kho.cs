@@ -3,6 +3,7 @@ using DTO;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FoodStoreManagement.GUI
 {
@@ -11,7 +12,7 @@ namespace FoodStoreManagement.GUI
         public Form_Kho()
         {
             InitializeComponent();
-            
+            dataGridView1.DataSource = null;
         }
 
         private void Form_Kho_Load(object sender, EventArgs e)
@@ -74,8 +75,21 @@ namespace FoodStoreManagement.GUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            //int idFood = Convert.ToInt16(textBox2.Text);
+            string status = textBox3.Text;
+            DateTime time = Convert.ToDateTime(dateTimePicker_Date.Text);
+            string idRequireAdd = textBox6.Text;
+            string idStaff = comboBox3.Text;
 
+
+            if(dataGridView1.Rows.Count > 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[0];
+                int idFood = Convert.ToInt32(row.Cells[0].ToString());
+                WarehouseIngredientDTO warehouseIngredientDTO = new WarehouseIngredientDTO(idFood,status,time,idRequireAdd,idStaff);
+                dataBUS.updateData(warehouseIngredientDTO);
+                dataGridView1.DataSource = dataBUS.getData();
+            }
         }
     }
 }

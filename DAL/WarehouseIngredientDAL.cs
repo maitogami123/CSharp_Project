@@ -27,8 +27,8 @@ namespace DAL
 
         public DataTable updateData(WarehouseIngredientDTO dataDTO)
         {
-            query = string.Format("update WarehouseIngredient set idFood = {0}, Status = '{1}', WarehouseDayAdd = '{2}', idRequireAdd = '{3}', idStaffAddtoWarehouse = '{4}'", 
-                dataDTO.IdFood, dataDTO.Status, dataDTO.WarehouseDayAdd, dataDTO.IdRequireAdd, dataDTO.IdStaffAddtoWarehouse);
+            query = string.Format("update WarehouseIngredient set Status = '{0}', WarehouseDayAdd = '{1}', idRequireAdd = '{2}', idStaffAddtoWarehouse = '{3}' where idFood = {4}"
+                ,dataDTO.Status, dataDTO.WarehouseDayAdd,dataDTO.IdStaffAddtoWarehouse,dataDTO.IdStaffAddtoWarehouse,dataDTO.IdFood);
             return funcDAL.func(query, dataDTO);
         }
         public bool delData(WarehouseIngredientDAL dataDTO)
