@@ -81,8 +81,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscountDetailBUS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WarehouseIngredientBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

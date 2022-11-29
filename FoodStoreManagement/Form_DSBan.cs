@@ -33,7 +33,7 @@ namespace FoodStoreManagement
         {
             dataGridView2.AutoGenerateColumns=false;
             dataGridView2.ColumnCount=3;
-            dataGridView2.Columns[0].HeaderText = "ID";
+            dataGridView2.Columns[0].HeaderText = "Mã số";
             dataGridView2.Columns[0].DataPropertyName="id";
             dataGridView2.Columns[1].HeaderText = "Tên bàn";
             dataGridView2.Columns[1].DataPropertyName = "tablefood";
