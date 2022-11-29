@@ -14,7 +14,7 @@ namespace DAL
         public string query;
         public DataTable getData()
         {
-            query = string.Format("select * from DiscountDetail");
+            query = "select idDiscount as [Mã số], DiscountPercent as [Phần trăm được giảm], DateTimeDiscount as [Hạn sử dụng], idFoodUsingDiscount as [Mã thức ăn] from DiscountDetail";
             return dataDAL.getData(query);
         }
     }
