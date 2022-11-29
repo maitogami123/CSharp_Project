@@ -19,8 +19,10 @@ namespace FoodStoreManagement.DAL
         }
 
         private DataProvider() { }
+  
+        //add datasource here!
+        private string connectionSTR = "Data Source=;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
 
-        private string connectionSTR = "Data Source=LAPTOP-523PQA8D;Initial Catalog=FoodStore_Managerment;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

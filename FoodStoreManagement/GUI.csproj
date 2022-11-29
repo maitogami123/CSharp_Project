@@ -395,9 +395,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
+    <ProjectReference Include="..\BLL\BUS.csproj">
       <Project>{b00a6b95-faec-4daa-8403-5c4561431f91}</Project>
-      <Name>BLL</Name>
+      <Name>BUS</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{db07e15d-27e2-4b52-8ac0-b2da17543182}</Project>
