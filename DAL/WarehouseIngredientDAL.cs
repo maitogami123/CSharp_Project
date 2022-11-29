@@ -12,6 +12,7 @@ namespace DAL
     {
         private FunctionsDAL funcDAL = new FunctionsDAL();
         private string query;
+        public WarehouseIngredientDAL() { }
         public DataTable getData()
         {
             query = string.Format("select * from WarehouseIngredient");
