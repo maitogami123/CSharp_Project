@@ -81,7 +81,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDTO.cs" />
     <Compile Include="Ban_DTO.cs" />
+    <Compile Include="DatBan_DTO.cs" />
     <Compile Include="FoodList_DTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

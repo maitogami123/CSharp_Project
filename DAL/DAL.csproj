@@ -82,9 +82,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDAL.cs" />
     <Compile Include="Ban_DAL.cs" />
     <Compile Include="Bill_DAL.cs" />
     <Compile Include="Data_Provider.cs" />
+    <Compile Include="DatBan_DAL.cs" />
+    <Compile Include="KhachHang_DAL.cs" />
     <Compile Include="DiscountDetailDAL.cs" />
     <Compile Include="FunctionsDAL.cs" />
     <Compile Include="WarehouseIngredientDAL.cs" />

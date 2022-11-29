@@ -101,6 +101,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Add\Form_AddDatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Add\Form_AddDatBan.Designer.cs">
+      <DependentUpon>Form_AddDatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Add\Form_DeleteOldDatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Add\Form_DeleteOldDatBan.Designer.cs">
+      <DependentUpon>Form_DeleteOldDatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Add\Form_UpdateDatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Add\Form_UpdateDatBan.Designer.cs">
+      <DependentUpon>Form_UpdateDatBan.cs</DependentUpon>
+
     <Compile Include="FoodStore_ManagermentDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,6 +170,12 @@
     </Compile>
     <Compile Include="Form_DatBan.designer.cs">
       <DependentUpon>Form_DatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DSKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DSKhachHang.Designer.cs">
+      <DependentUpon>Form_DSKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_DSMonAn.cs">
       <SubType>Form</SubType>
@@ -257,6 +281,14 @@
     <Compile Include="QLBan_HoaDon.designer.cs">
       <DependentUpon>QLBan_HoaDon.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_Add\Form_AddDatBan.resx">
+      <DependentUpon>Form_AddDatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Add\Form_DeleteOldDatBan.resx">
+      <DependentUpon>Form_DeleteOldDatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Add\Form_UpdateDatBan.resx">
+      <DependentUpon>Form_UpdateDatBan.cs</DependentUpon>
     <EmbeddedResource Include="Form_AddAccount.resx">
       <DependentUpon>Form_AddAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DatBan.resx">
       <DependentUpon>Form_DatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DSKhachHang.resx">
+      <DependentUpon>Form_DSKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DSMonAn.resx">
       <DependentUpon>Form_DSMonAn.cs</DependentUpon>

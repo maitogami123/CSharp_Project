@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox_TimKiem = new System.Windows.Forms.TextBox();
@@ -53,39 +55,71 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.textBox_TimKiem);
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Location = new System.Drawing.Point(29, 65);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(587, 322);
+            this.panel3.Size = new System.Drawing.Size(657, 322);
             this.panel3.TabIndex = 17;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.ForeColor = System.Drawing.Color.Black;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Trống",
+            "Có người"});
+            this.comboBox3.Location = new System.Drawing.Point(207, 11);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(152, 24);
+            this.comboBox3.TabIndex = 20;
+            this.comboBox3.Text = "Chọn trạng thái";
+            this.comboBox3.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(570, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "refesh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(512, 12);
+            this.button2.Location = new System.Drawing.Point(489, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Tìm kiếm";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Mã số",
+            "Tên bàn",
+            "Trạng thái"});
             this.comboBox2.Location = new System.Drawing.Point(0, 12);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(106, 24);
             this.comboBox2.TabIndex = 7;
             this.comboBox2.Text = "Chọn bộ lọc";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // textBox_TimKiem
             // 
             this.textBox_TimKiem.ForeColor = System.Drawing.Color.Gray;
             this.textBox_TimKiem.Location = new System.Drawing.Point(112, 12);
             this.textBox_TimKiem.Name = "textBox_TimKiem";
-            this.textBox_TimKiem.Size = new System.Drawing.Size(394, 22);
+            this.textBox_TimKiem.Size = new System.Drawing.Size(371, 22);
             this.textBox_TimKiem.TabIndex = 6;
             this.textBox_TimKiem.Text = "Tìm kiếm";
             // 
@@ -101,9 +135,9 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(587, 266);
+            this.dataGridView2.Size = new System.Drawing.Size(657, 266);
             this.dataGridView2.TabIndex = 5;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // id
             // 
@@ -133,7 +167,7 @@
             this.panel2.Location = new System.Drawing.Point(29, 27);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 20);
+            this.panel2.Size = new System.Drawing.Size(657, 20);
             this.panel2.TabIndex = 16;
             // 
             // label1
@@ -154,15 +188,18 @@
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Location = new System.Drawing.Point(29, 408);
+            this.panel1.Location = new System.Drawing.Point(64, 411);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(587, 49);
             this.panel1.TabIndex = 15;
             // 
             // comboBox1
             // 
-            this.comboBox1.ForeColor = System.Drawing.Color.Gray;
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Trống",
+            "Có người"});
             this.comboBox1.Location = new System.Drawing.Point(145, 13);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(152, 24);
@@ -187,6 +224,7 @@
             this.button6.TabIndex = 17;
             this.button6.Text = "Sửa";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -212,7 +250,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(647, 472);
+            this.ClientSize = new System.Drawing.Size(720, 472);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -249,5 +287,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn tablefood;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

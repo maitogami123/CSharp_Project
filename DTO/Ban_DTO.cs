@@ -9,6 +9,9 @@ namespace DTO
 {
     public class Ban
     {
+        private int iD;
+        private string name;
+        private string status;
         public Ban(int id, string name, string status)
         {
             this.ID = id;
@@ -23,23 +26,17 @@ namespace DTO
             this.Status = row["status"].ToString();
         }
 
-        private string status;
-
         public string Status
         {
             get { return status; }
             set { status = value; }
         }
 
-        private string name;
-
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
-
-        private int iD;
 
         public int ID
         {
