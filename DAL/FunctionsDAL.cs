@@ -55,5 +55,28 @@ namespace DAL
             }
             return dataDAL;
         }
+        public bool _func(string query, WarehouseIngredientDTO dataDTO)
+        {
+            DataTable dataDAL = new DataTable();
+            using (SqlConnection _conn = new SqlConnection(_connString))
+            {
+                try
+                {
+                    _conn.Open();
+                    SqlCommand sqlComm = new SqlCommand(query, _conn);
+                    if (sqlComm.ExecuteNonQuery() > 1)
+                    {
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { _conn.Close(); }
+
+            }
+            return false;
+        }
     }
 }
