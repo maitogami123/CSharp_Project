@@ -16,7 +16,6 @@ namespace FoodStoreManagement.GUI
         public Form_UpdateAccount(string userName, string displayUserName, string passWord, string typeAccount)
         {
             InitializeComponent();
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             textBox1.Text = userName;
             textBox3.Text = displayUserName;
             textBox2.Text = passWord;
@@ -78,7 +77,7 @@ namespace FoodStoreManagement.GUI
         private void Form_UpdateAccount_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'foodStore_ManagermentDataSet1.Account' table. You can move, or remove it, as needed.
-            this.accountTableAdapter.Fill(this.foodStore_ManagermentDataSet1.Account);
+            //this.accountTableAdapter.Fill(this.foodStore_ManagermentDataSet1.Account);
 
         }
 

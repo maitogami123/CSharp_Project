@@ -106,7 +106,7 @@ namespace FoodStoreManagement.GUI
             }
             if (AccountDAL.Instance.UserName != "Admin")
             {
-                button_DSTaiKhoan.Enabled = false;
+                //button_DSTaiKhoan.Enabled = false;
             }
             if (AccountDAL.Instance.UserName != "QL")
             {
