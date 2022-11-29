@@ -15,7 +15,6 @@ namespace FoodStoreManagement.GUI
         public Form_DSKhuyenMai()
         {
             InitializeComponent();
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             dateTimePicker_Date.MinDate = DateTime.Now;
             dateTimePicker_Date.MaxDate = DateTime.Now.AddDays(7);
         }

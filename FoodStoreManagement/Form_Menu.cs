@@ -110,10 +110,10 @@ namespace FoodStoreManagement.GUI
             }
             if (AccountDAL.Instance.UserName != "QL")
             {
-                button_NhapHang.Enabled = false;
-                button_DSThongKe.Enabled = false;
-                button_DSKhuyenMai.Enabled = false;
-                button_Kho.Enabled = false;
+                //button_NhapHang.Enabled = false;
+                //button_DSThongKe.Enabled = false;
+                //button_DSKhuyenMai.Enabled = false;
+                //button_Kho.Enabled = false;
             }
         }
         private void button_Home_Click(object sender, EventArgs e)

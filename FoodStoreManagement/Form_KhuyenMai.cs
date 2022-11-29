@@ -18,7 +18,6 @@ namespace FoodStoreManagement.GUI
         public Form_KhuyenMai()
         {
             InitializeComponent();
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
         }
 
