@@ -73,23 +73,6 @@ namespace FoodStoreManagement.GUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //int idFood = Convert.ToInt16(textBox2.Text);
-            //string status = textBox3.Text;
-            //DateTime time = Convert.ToDateTime(dateTimePicker_Date.Text);
-            //string idRequireAdd = textBox6.Text;
-            //string idStaff = comboBox3.Text;
-
-
-
-            //DataGridViewRow row = dataGridView1.SelectedRows[0];
-            //int idFood = Convert.ToInt32(row.Cells[0].Value.ToString());
-            //WarehouseIngredientDTO warehouseIngredientDTO = new WarehouseIngredientDTO(idFood, status, time, idRequireAdd, idStaff);
-            //if(dataBUS.updateData(warehouseIngredientDTO)){
-            //    MessageBox.Show("Thành Công");
-            //    dataGridView1.DataSource = dataBUS.getData();
-            //}
-            
-
             if(dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridView1.SelectedRows[0];
@@ -101,7 +84,17 @@ namespace FoodStoreManagement.GUI
                 dataGridView1.DataSource = dataBUS.getData();
                 
             }
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridView1.SelectedRows[0];
+                int id = Convert.ToInt16(row.Cells[0].Value.ToString());
+                dataBUS.delData(id);
+                dataGridView1.DataSource = dataBUS.getData();
+            }
         }
     }
 }

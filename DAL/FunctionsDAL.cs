@@ -78,5 +78,28 @@ namespace DAL
             }
             return false;
         }
+        public DataTable delData(string query, int id)
+        {
+            DataTable dataDAL = new DataTable();
+            
+            using(SqlConnection _conn = new SqlConnection(_connString))
+            {
+                try
+                {
+                    _conn.Open();
+                    SqlCommand sqlCommand = new SqlCommand(query, _conn);
+                    if(sqlCommand.ExecuteNonQuery()> 0)
+                    {
+                        return dataDAL;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { _conn.Close(); }
+            }
+            return dataDAL;
+        }
     }
 }

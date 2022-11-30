@@ -30,10 +30,11 @@ namespace DAL
             query = string.Format("update WarehouseIngredient set idFood = {0}, Status = '{1}', WarehouseDayAdd = '{2}', idRequireAdd = '{3}', idStaffAddtoWarehouse = '{4}' where idFood = {5}",
                dataDTO.IdFood, dataDTO.Status, dataDTO.WarehouseDayAdd, dataDTO.IdStaffAddtoWarehouse, dataDTO.IdStaffAddtoWarehouse, dataDTO.IdFood);
             return funcDAL.func(query, dataDTO);
-        }
-        public bool delData(WarehouseIngredientDAL dataDTO)
+        } 
+        public DataTable delData(int id)
         {
-            return false;
+            query = string.Format("delete from WarehouseIngredient where idFood = {0}",id  );
+            return funcDAL.delData(query,id);
         }
     }
 }
