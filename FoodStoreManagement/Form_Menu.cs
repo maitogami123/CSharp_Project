@@ -18,7 +18,7 @@ namespace FoodStoreManagement.GUI
         Form_Kho form_Kho;
         Form_DSKhuyenMai form_DSKhuyenMai;
         Form_DatBan form_DatBan;
-        Form_DSMonAn form_DatHang;
+        //Form_DSMonAn form_DatHang;
         Form_DoanhThuTongQuan form_DoanhThuTongQuan;
         Form_GioHang form_GioHang;
         Form_HoaDon form_HoaDon;
@@ -51,9 +51,9 @@ namespace FoodStoreManagement.GUI
             form_DSKhuyenMai = new Form_DSKhuyenMai();
             form_DSKhuyenMai.TopLevel = false;
             panel_FormContainer.Controls.Add(form_DSKhuyenMai);
-            form_DatHang = new Form_DSMonAn();
-            form_DatHang.TopLevel = false;
-            panel_FormContainer.Controls.Add(form_DatHang);
+            //form_DatHang = new Form_DSMonAn();
+            //form_DatHang.TopLevel = false;
+            //panel_FormContainer.Controls.Add(form_DatHang);
             form_DatBan = new Form_DatBan();
             form_DatBan.TopLevel = false;
             panel_FormContainer.Controls.Add(form_DatBan);
@@ -102,14 +102,14 @@ namespace FoodStoreManagement.GUI
 
         private void button_DatHang_Click(object sender, EventArgs e)
         {
-            if (form_DatHang.Visible == false)
-            {
-                form_DatHang.Visible = true;
-            }
-            else
-            {
-                form_DatHang.Visible = false;
-            }
+            //if (form_DatHang.Visible == false)
+            //{
+            //    form_DatHang.Visible = true;
+            //}
+            //else
+            //{
+            //    form_DatHang.Visible = false;
+            //}
         }
 
         private void button_DatBan_Click(object sender, EventArgs e)
