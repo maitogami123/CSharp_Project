@@ -45,9 +45,9 @@ namespace DAL
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT id,idTableFood,idStaff FROM Bill WHERE "+table+"=N'"+id+"' AND status=N'"+status+"'");
             return data;
         }
-        public DataTable UpdateHDStatus(string id,string idban, string idnv, string status)
+        public DataTable UpdateHDStatusAndMoney(string id,string idban, string idnv, string status,string money)
         {
-            DataTable dt = DataProvider.Instance.ExecuteQuery("UPDATE Bill SET status = N'" + status + "' WHERE id = N'" + id + "' AND idTableFood = N'" + idban + "' AND idStaff = N'" + idnv + "'");
+            DataTable dt = DataProvider.Instance.ExecuteQuery("UPDATE Bill SET status = N'" + status + "',TotalPrice=N'"+money+"' WHERE id = N'" + id + "' AND idTableFood = N'" + idban + "' AND idStaff = N'" + idnv + "'");
             return dt;
         }
 

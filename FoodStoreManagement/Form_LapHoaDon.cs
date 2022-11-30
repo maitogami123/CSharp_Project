@@ -262,7 +262,7 @@ namespace FoodStoreManagement.GUI
             DataTable g = HoaDon_LapHD_DAL.Instance.GetTableStatus(comboBox1.GetItemText(comboBox1.SelectedItem));
             string idf = g.Rows[0]["id"].ToString();
             HoaDon_LapHD_DAL.Instance.ChangeTableStatus(idf, "Trống");
-            HoaDon_LapHD_DAL.Instance.UpdateHDStatus(FindIdBill(),idf, "NV-1", "1");
+            HoaDon_LapHD_DAL.Instance.UpdateHDStatusAndMoney(FindIdBill(),idf, "NV-1", "1",textBox1.Text);
             dataGridView1.DataSource = null;
             textBox1.Text = "0";
             textBox3.Text= "0";
