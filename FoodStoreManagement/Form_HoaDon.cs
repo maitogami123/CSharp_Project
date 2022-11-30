@@ -18,6 +18,7 @@ namespace FoodStoreManagement.GUI
             InitializeComponent();
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             loadtable();
+            loadtable2();
         }
         void loadtable()
         {
@@ -107,8 +108,9 @@ namespace FoodStoreManagement.GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            loadtable2();
             
+            DataGridViewRow row = dataGridView1.CurrentCell.OwningRow;
+            dataGridView2.DataSource = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.BillInfo WHERE idBill =N'" + row.Cells[0].Value.ToString() + "'");
         }
         void loadtable2()
         {
@@ -122,8 +124,7 @@ namespace FoodStoreManagement.GUI
             dataGridView2.Columns[2].DataPropertyName = "idFood";
             dataGridView2.Columns[3].HeaderText = "Số lượng";
             dataGridView2.Columns[3].DataPropertyName = "AmountFood";
-            DataGridViewRow row = dataGridView1.CurrentCell.OwningRow;
-            dataGridView2.DataSource = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.BillInfo WHERE idBill =N'"+ row.Cells[0].Value.ToString() + "'");
+            
         }
     }
 }

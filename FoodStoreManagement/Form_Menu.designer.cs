@@ -96,7 +96,7 @@
             this.panel_MenuButtonContainer.Controls.Add(this.flowLayoutPanel1);
             this.panel_MenuButtonContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_MenuButtonContainer.Location = new System.Drawing.Point(0, 82);
-            this.panel_MenuButtonContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_MenuButtonContainer.Margin = new System.Windows.Forms.Padding(4);
             this.panel_MenuButtonContainer.Name = "panel_MenuButtonContainer";
             this.panel_MenuButtonContainer.Size = new System.Drawing.Size(257, 692);
             this.panel_MenuButtonContainer.TabIndex = 16;
@@ -141,7 +141,7 @@
             this.button_Home.Image = ((System.Drawing.Image)(resources.GetObject("button_Home.Image")));
             this.button_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Home.Location = new System.Drawing.Point(-8, -10);
-            this.button_Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_Home.Margin = new System.Windows.Forms.Padding(4);
             this.button_Home.Name = "button_Home";
             this.button_Home.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_Home.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -167,7 +167,7 @@
             this.button_DatHang.Image = ((System.Drawing.Image)(resources.GetObject("button_DatHang.Image")));
             this.button_DatHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DatHang.Location = new System.Drawing.Point(-8, -8);
-            this.button_DatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_DatHang.Margin = new System.Windows.Forms.Padding(4);
             this.button_DatHang.Name = "button_DatHang";
             this.button_DatHang.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_DatHang.Size = new System.Drawing.Size(273, 82);
@@ -192,7 +192,7 @@
             this.button_DSBan.Image = ((System.Drawing.Image)(resources.GetObject("button_DSBan.Image")));
             this.button_DSBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DSBan.Location = new System.Drawing.Point(-8, -8);
-            this.button_DSBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_DSBan.Margin = new System.Windows.Forms.Padding(4);
             this.button_DSBan.Name = "button_DSBan";
             this.button_DSBan.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_DSBan.Size = new System.Drawing.Size(273, 82);
@@ -217,7 +217,7 @@
             this.button_DSSanPham.Image = ((System.Drawing.Image)(resources.GetObject("button_DSSanPham.Image")));
             this.button_DSSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DSSanPham.Location = new System.Drawing.Point(-8, -9);
-            this.button_DSSanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_DSSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.button_DSSanPham.Name = "button_DSSanPham";
             this.button_DSSanPham.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_DSSanPham.Size = new System.Drawing.Size(273, 82);
@@ -242,12 +242,12 @@
             this.button_GioHang.Image = ((System.Drawing.Image)(resources.GetObject("button_GioHang.Image")));
             this.button_GioHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_GioHang.Location = new System.Drawing.Point(-8, -7);
-            this.button_GioHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_GioHang.Margin = new System.Windows.Forms.Padding(4);
             this.button_GioHang.Name = "button_GioHang";
             this.button_GioHang.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_GioHang.Size = new System.Drawing.Size(273, 82);
             this.button_GioHang.TabIndex = 0;
-            this.button_GioHang.Text = "CART";
+            this.button_GioHang.Text = "LẬP HÓA ĐƠN";
             this.button_GioHang.UseVisualStyleBackColor = true;
             this.button_GioHang.Click += new System.EventHandler(this.button_GioHang_Click);
             // 
@@ -267,7 +267,7 @@
             this.button_DatBan.Image = ((System.Drawing.Image)(resources.GetObject("button_DatBan.Image")));
             this.button_DatBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DatBan.Location = new System.Drawing.Point(-8, -7);
-            this.button_DatBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_DatBan.Margin = new System.Windows.Forms.Padding(4);
             this.button_DatBan.Name = "button_DatBan";
             this.button_DatBan.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_DatBan.Size = new System.Drawing.Size(273, 82);
@@ -292,7 +292,7 @@
             this.button_DSKhuyenMai.Image = ((System.Drawing.Image)(resources.GetObject("button_DSKhuyenMai.Image")));
             this.button_DSKhuyenMai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DSKhuyenMai.Location = new System.Drawing.Point(-8, -12);
-            this.button_DSKhuyenMai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_DSKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
             this.button_DSKhuyenMai.Name = "button_DSKhuyenMai";
             this.button_DSKhuyenMai.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_DSKhuyenMai.Size = new System.Drawing.Size(273, 92);
@@ -317,7 +317,7 @@
             this.button_NhapHang.Image = ((System.Drawing.Image)(resources.GetObject("button_NhapHang.Image")));
             this.button_NhapHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_NhapHang.Location = new System.Drawing.Point(-8, -7);
-            this.button_NhapHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_NhapHang.Margin = new System.Windows.Forms.Padding(4);
             this.button_NhapHang.Name = "button_NhapHang";
             this.button_NhapHang.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_NhapHang.Size = new System.Drawing.Size(273, 82);
@@ -342,7 +342,7 @@
             this.button_Kho.Image = ((System.Drawing.Image)(resources.GetObject("button_Kho.Image")));
             this.button_Kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Kho.Location = new System.Drawing.Point(-8, -7);
-            this.button_Kho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_Kho.Margin = new System.Windows.Forms.Padding(4);
             this.button_Kho.Name = "button_Kho";
             this.button_Kho.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_Kho.Size = new System.Drawing.Size(273, 82);
@@ -367,7 +367,7 @@
             this.button_DSThongKe.Image = ((System.Drawing.Image)(resources.GetObject("button_DSThongKe.Image")));
             this.button_DSThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DSThongKe.Location = new System.Drawing.Point(-8, -7);
-            this.button_DSThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_DSThongKe.Margin = new System.Windows.Forms.Padding(4);
             this.button_DSThongKe.Name = "button_DSThongKe";
             this.button_DSThongKe.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_DSThongKe.Size = new System.Drawing.Size(273, 82);
@@ -392,7 +392,7 @@
             this.button_DSTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("button_DSTaiKhoan.Image")));
             this.button_DSTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DSTaiKhoan.Location = new System.Drawing.Point(-8, -12);
-            this.button_DSTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_DSTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.button_DSTaiKhoan.Name = "button_DSTaiKhoan";
             this.button_DSTaiKhoan.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button_DSTaiKhoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -436,7 +436,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(25, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 46);
             this.pictureBox1.TabIndex = 1;
@@ -460,7 +460,7 @@
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(-8, -9);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(273, 82);
@@ -485,7 +485,7 @@
             this.ClientSize = new System.Drawing.Size(1540, 840);
             this.Controls.Add(this.panel_FormContainer);
             this.Controls.Add(this.panel9);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

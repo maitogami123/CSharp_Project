@@ -158,13 +158,13 @@ namespace FoodStoreManagement.GUI
         private void button_GioHang_Click(object sender, EventArgs e)
         {
             handleHideForm();
-            if (form_GioHang.Visible == false)
+            if (form_LapHoaDon.Visible == false)
             {
-                form_GioHang.Visible = true;
+                form_LapHoaDon.Visible = true;
             }
             else
             {
-                form_GioHang.Visible = false;
+                form_LapHoaDon.Visible = false;
             }
         }
 
@@ -258,6 +258,7 @@ namespace FoodStoreManagement.GUI
 
         private void button_DSBan_Click(object sender, EventArgs e)
         {
+            handleHideForm();
             if (form_DSBan.Visible == false)
             {
                 form_DSBan.Visible = true;
