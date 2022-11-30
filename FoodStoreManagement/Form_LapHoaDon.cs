@@ -158,6 +158,11 @@ namespace FoodStoreManagement.GUI
             {
                 HoaDon_LapHD_DAL.Instance.ChangeTableStatus(idf, "Có người");
                 HoaDon_LapHD_DAL.Instance.AddRow(idf, "NV-1", DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"), "0", 0);
+                dataGridView1.DataSource = null;
+                DataTable gh = SortBillInfo(FindIdBill());
+                dataGridView1.DataSource = gh;
+                textBox1.Text = TongTien();
+                textBox3.Text = TienDu();
             }
             if (status == "Có người")
             {
