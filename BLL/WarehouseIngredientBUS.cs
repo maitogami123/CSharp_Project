@@ -20,9 +20,18 @@ namespace BLL
         {
             return dataDAL.insertData(dataDTO); 
         }
+        //public bool _updateData(WarehouseIngredientDTO dataDTO)
+        //{
+        //    return dataDAL.updateData(dataDTO);
+        //}
         public DataTable updateData(WarehouseIngredientDTO dataDTO)
         {
             return dataDAL.updateData(dataDTO);
+        }
+
+        public DataTable delData(int id)
+        {
+            return dataDAL.delData(id);
         }
     }
 }
