@@ -19,9 +19,9 @@ namespace DAL
                     conn.Open();
                     SqlCommand sqlComm = new SqlCommand(query, conn);
                     SqlDataAdapter sqlData = new SqlDataAdapter(sqlComm);
-                    sqlData.Fill(data); 
+                    sqlData.Fill(data);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -54,6 +54,29 @@ namespace DAL
 
             }
             return dataDAL;
+        }
+        public DataTable delData(string query, int id)
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection _conn = new SqlConnection(_connString))
+            {
+                try
+                {
+                    _conn.Open();
+                    SqlCommand sqlComm = new SqlCommand(query, _conn);
+                    if (sqlComm.ExecuteNonQuery() > 0)
+                    {
+                        return data;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+                finally { _conn.Close(); }
+            }
+            return data;
         }
     }
 }

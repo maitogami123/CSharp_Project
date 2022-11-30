@@ -31,9 +31,10 @@ namespace DAL
                 ,dataDTO.Status, dataDTO.WarehouseDayAdd,dataDTO.IdStaffAddtoWarehouse,dataDTO.IdStaffAddtoWarehouse,dataDTO.IdFood);
             return funcDAL.func(query, dataDTO);
         }
-        public bool delData(WarehouseIngredientDAL dataDTO)
+        public DataTable delData(int id)
         {
-            return false;
+            query = string.Format("delete from WarehouseIngredient where idFood = {0}", id);
+            return funcDAL.delData(query, id);
         }
     }
 }

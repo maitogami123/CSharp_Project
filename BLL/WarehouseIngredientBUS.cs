@@ -22,7 +22,14 @@ namespace BLL
         }
         public DataTable updateData(WarehouseIngredientDTO dataDTO)
         {
-            return dataDAL.updateData(dataDTO);
+            DataTable data = new DataTable();
+            data = dataDAL.delData(dataDTO.IdFood);
+            data = dataDAL.insertData(dataDTO);
+            return data;
+        }
+        public DataTable delData(int idFood)
+        {
+            return dataDAL.delData(idFood);
         }
     }
 }

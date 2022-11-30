@@ -92,5 +92,17 @@ namespace FoodStoreManagement.GUI
                 dataGridView1.DataSource = dataBUS.getData();
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridView1.SelectedRows[0];
+                int id = Convert.ToInt16(row.Cells[0].Value.ToString());
+
+                dataBUS.delData(id);
+                dataGridView1.DataSource = dataBUS.getData();
+            }
+        }
     }
 }
