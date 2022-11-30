@@ -1,5 +1,6 @@
 ﻿using DTO;
 using System.Data;
+using System.Net.Http;
 
 namespace DAL
 {
@@ -35,6 +36,11 @@ namespace DAL
         {
             query = string.Format("delete from WarehouseIngredient where idFood = {0}",id  );
             return funcDAL.delData(query,id);
+        }
+        public bool _delData(int id)
+        {
+            query = string.Format("delete from WarehouseIngredient where idFood = {0}", id);
+            return funcDAL._delData(query,id);
         }
     }
 }

@@ -101,5 +101,28 @@ namespace DAL
             }
             return dataDAL;
         }
+
+        public bool _delData(string query, int id)
+        {
+            bool final = false;
+            using(SqlConnection _conn =new SqlConnection(_connString))
+            {
+                try
+                {
+                    _conn.Open();
+                    SqlCommand sqlCommand = new SqlCommand(query,_conn);
+                    if (sqlCommand.ExecuteNonQuery() > 1)
+                    {
+                        return final = true;
+                    }
+                }
+                catch(Exception ex)
+                {
+
+                }
+                finally { _conn.Close(); }
+            }
+            return final;
+        }
     }
 }

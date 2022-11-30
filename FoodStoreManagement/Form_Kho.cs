@@ -64,11 +64,19 @@ namespace FoodStoreManagement.GUI
             string idRequireAdd = textBox6.Text;
             string idStaff = comboBox3.Text;
             WarehouseIngredientDTO warehouseIngredientDTO = new WarehouseIngredientDTO(idFood, status, time, idRequireAdd, idStaff);
-
+            //try
+            //{
+            //    dataBUS.insertData(warehouseIngredientDTO);
+            //    MessageBox.Show("Thành Công");
+            //    dataGridView1.DataSource = dataBUS.getData();
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show("Không Thành Công");
+            //    dataGridView1.DataSource= dataBUS.getData();
+            //}
             dataBUS.insertData(warehouseIngredientDTO);
             dataGridView1.DataSource = dataBUS.getData();
-
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -82,7 +90,18 @@ namespace FoodStoreManagement.GUI
                     (idFood, textBox3.Text, Convert.ToDateTime(dateTimePicker_Date.Text), textBox6.Text, comboBox3.Text); ;
                 dataBUS.updateData(warehouseIngredientDTO);
                 dataGridView1.DataSource = dataBUS.getData();
-                
+
+                //try
+                //{
+                //    dataBUS.updateData(warehouseIngredientDTO);
+                //    MessageBox.Show("Thành công");
+                //    dataGridView1.DataSource = dataBUS.getData();
+                //}
+                //catch(Exception ex)
+                //{
+                //    MessageBox.Show("Không thành công");
+                //    dataGridView1.DataSource= dataBUS.getData();
+                //}
             }
         }
 
@@ -94,6 +113,26 @@ namespace FoodStoreManagement.GUI
                 int id = Convert.ToInt16(row.Cells[0].Value.ToString());
                 dataBUS.delData(id);
                 dataGridView1.DataSource = dataBUS.getData();
+                //if (dataBUS._delData(id))
+                //{
+                //    MessageBox.Show("Thành Công");
+                //    dataBUS.getData();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Không thành công");
+                //}
+                //try
+                //{
+                //    dataBUS.delData(id);
+                //    MessageBox.Show("thành công");
+                //    dataBUS.getData();
+                //}
+                //catch(Exception ex)
+                //{
+                //    MessageBox.Show("Không thành công");
+                //    dataBUS.getData();
+                //}
             }
         }
     }

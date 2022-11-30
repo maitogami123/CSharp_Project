@@ -26,12 +26,21 @@ namespace BLL
         //}
         public DataTable updateData(WarehouseIngredientDTO dataDTO)
         {
-            return dataDAL.updateData(dataDTO);
+            //return dataDAL.updateData(dataDTO);
+            DataTable data = new DataTable();
+            data = dataDAL.delData(dataDTO.IdFood);
+            data = dataDAL.insertData(dataDTO);
+            return data;
         }
 
         public DataTable delData(int id)
         {
+            
             return dataDAL.delData(id);
+        }
+        public bool _delData(int id)
+        {
+            return dataDAL._delData(id);
         }
     }
 }
